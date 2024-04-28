@@ -1,5 +1,5 @@
 :root{
-    --brand-color:#605DEC ;
+    --brand-color:#605dec ;
     --text-grey-color:#7C8DB0;
     --white-color:rgb(255, 255, 255);
     --black-color:#27273F;
@@ -31,4 +31,34 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+}
+button:hover{
+    background-color: whitesmoke;
+    color: var(--brand-color);
+    border-color: var(--brand-color);
+    border-color: var(--brand-color);
+}
+button{
+    border: none;
+    background-color: var(--white-color);
+}
+.exit :hover {
+    color: red;
+    cursor: pointer;
+}
+.warning{
+    font-size: smaller;
+    color:red;
+    display: none;
+}
+._btn{
+    color: var(--white-color);
+    background-color: var(--brand-color);
+    border-radius: 0.5rem;
+}
+._btn:hover{
+    color: var(--brand-color);
+    font-weight: bold;
+    border: 2px solid var(--brand-color);
+    
 }
