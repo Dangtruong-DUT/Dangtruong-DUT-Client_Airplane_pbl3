@@ -1,3 +1,34 @@
+.messagebox{
+    display: none;
+    position: fixed;
+    background-color: var(--white-color);
+    z-index: 2;
+    border-radius: 0.5rem;
+    box-shadow: -2px 1px 90px -2px var(--brand-color);
+    width: 40rem;
+    min-height: 8rem;
+    margin: 25rem;
+    margin-left: 50rem;
+    text-align: center;
+    padding: 1rem;
+}
+.messagebox__bieutuong{
+    font-size: xx-large;
+}
+.messagebox__bieutuong--warning {
+    color: red;
+}
+.messagebox__bieutuong--Congratulations{
+    color: var(--brand-color);
+}
+.messagebox__title{
+    color: var(--text-greyer-color);
+    font-weight: bolder;
+    font-size: large;
+}
+.messagebox__content {
+    color: var(--text-grey-color)
+}
 
 .thongBao {
     padding-top: 12px;
@@ -45,9 +76,7 @@
     cursor: pointer;
 }
 
-/*
-    form dang ky& dang nhập
-*/
+/*form dang ky& dang nhập */
 .container__form,.navbar__dangKy {
     position: fixed;
     position: absolute;
@@ -125,13 +154,9 @@
     border-radius: 0.5rem;
     color: var(--white-color);
 }
-/* 
-    hết phần form dang ký & dang nhap
-*/
+/* hết phần form dang ký & dang nhap */
 
-/*
-    CSKH
-*/
+/* CSKH */
 
 .cskh{
     display: none;
@@ -185,11 +210,10 @@
     font-weight: bold;
 }
 
- /*
-    KẾT THÚC PHẦN CSKH
- */
+ /*  /.KẾT THÚC PHẦN CSKH */
     
 
+/*  phần tìm kiếm chuyến bay*/
 
 .trangchu__timkiemchuyenbay {
     background-color: var(--brand-color);
@@ -204,6 +228,7 @@
     font-style: normal;
     font-size: 7rem;   
 }
+
 .timkiemchuyenbay{
     width: 100%;
     position: relative;
@@ -357,6 +382,9 @@
     margin-right: 7px;
     border: none;
 } 
+/*  /.hết phần tìm kiếm chuyến bay*/
+
+/*  phần chân trang*/
 
 .chanTrang {
     color:#337ab7;
@@ -384,15 +412,68 @@
 .fa-brands{
     color: var(--text-grey-color);
 }
-/*  hết phần chân trang*/
+/*  /.hết phần chân trang*/
+
+
 
 
 
 /* trang chon chuyến bay */
-.trangchonchuyenbay {
+.trangchonchuyenbay{
     display: none;
 }
-/* Filter bar */
+.thongtinhanhtrinh{
+    background-color: rgb(98, 95, 236,10%);
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: xx-large;
+    width: 100%;
+    height: 10rem;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 5rem 0;
+}
+
+.thongtinhanhtring-colum {
+    display: flex;
+    justify-content: space-around;
+    color: var(--brand-color);
+}
+.thongtinhanhtrinh--tieude {
+    justify-content: start;
+}
+.thongtinhanhtrinh-tieude{
+    font-size: medium;
+    position: relative;
+    font-weight: light;
+    margin-left: 30px;
+    color: black;
+    margin-bottom: 1rem;
+}
+.thongtinhanhtrinh-tieude--phancach::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: rgba(1, 1, 22, 0.1);
+    background-color: red;
+    top:4px;
+    right: -17px;
+}
+.icon {
+    color: red;
+}
+.thongtinhanhtrinh-ngaykhoihanh {
+    font-size: medium;
+    font-weight: bolder;
+    text-align: center;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+
 .filter-bar {
     display: flex;   
     margin-top: 1rem;
@@ -470,7 +551,7 @@
 }
 
 .flight-lists::-webkit-scrollbar-thumb {
-    background-color: var(--brand-color);
+    background-color: var(--text-greyer-color);
     border-radius: 0.1rem;
     height: fit-content;
     width: 8px;
@@ -491,6 +572,8 @@
 .flight-option:hover {
     background-color: rgb(98, 95, 236,10%);
 }
+
+
 /* chuyen bay duoc chon*/
 .chyenbayduocchon {
     margin-top: 2rem;
@@ -534,10 +617,66 @@
     display: flex;
     justify-content: space-between;
     color: #1513A0;
-    background-color: rgb(98, 95, 236,10%);
+    background-color: rgba(1, 1, 22, 0.1);
     padding: 2rem;
 }
 .tongtien{
     font-size: xx-large;
     font-weight: bold;
+}
+.chonchuyenve {
+    display: none;
+}
+li:focus{
+    background-color: rgb(98, 95, 236,10%);
+    border-radius: 0.5rem;
+    border: 2px solid var(--brand-color)
+}
+
+/* /.hết trang chon chuyến bay */
+
+
+/* Phần nhập thông tin khách hàng */
+
+.title--thongTinHanhKhach{
+    font-weight: bold;
+    font-size: x-large;
+}
+.desc--thongtinhanhkhach{
+    font-size: medium;
+    color: var(--text-grey-color);
+    margin-left: -1.5rem;
+    margin-top: 1rem;
+}
+.desc--boxThongtin {
+    color: var(--text-greyer-color);
+}
+.thongTinHanhKhach__BoxDienThongTin{
+    margin-left: -3rem;
+    font-size: large;
+}
+
+.thanhNhapThongTin{
+    margin: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.boxnhapthongtinHK {
+    width: 47%;
+}
+.desc--moTaNgaySinh{
+    color: var(--text-grey-color);
+    font-size: small;
+    margin-bottom: 0px;
+}
+.thanhNhapThongTin--row0{
+    margin-bottom: 1rem;
+}
+.thanhNhapThongTin--row1{
+    margin-top: 1rem;
+}
+.thongTinHanhKhach__HinhAnhMoTa{
+    padding-left: 10rem;
+    text-align: right;
 }

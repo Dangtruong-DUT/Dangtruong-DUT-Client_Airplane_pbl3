@@ -150,6 +150,7 @@ function kiemtraInputDangKy( fulltNameSignUp,enroll_birth_date, enroll_birth_mon
     var giaTri_birth_date = document.getElementById(enroll_birth_date).value;
     var giaTri_birth_month = document.getElementById(enroll_birth_month).value;
     var giaTri_birth_year = document.getElementById(enroll_birth_year).value;
+    
     if (giaTri_birth_month < 10) {
         giaTri_birth_month = '0' + giaTri_birth_month;
     }

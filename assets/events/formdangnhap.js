@@ -28,26 +28,12 @@ $(document).ready( function(){
 function kiemtraInputDangNhap(idEmail,idPassword)
 {   
     var check=true;
-    var giaTriEmail = document.getElementById(idEmail).value;
-    var thePEmail = document.getElementById(idEmail).nextElementSibling;
-    var giaTriPassword = document.getElementById(idPassword).value;
-    var thePPassword = document.getElementById(idPassword).nextElementSibling;
 
     if (!kiemtraEmailHopLe(idEmail))  check = false;
 
-    if (giaTriEmail != ""){
-        thePEmail.style.display = "none";
-    } else {
-        thePEmail.style.display = "block";
-        thePEmail.innerHTML = "*Email không được để trống"
-        check=false
-    }
-    if (giaTriPassword != ""){
-        thePPassword.style.display = "none";
-    } else {
-        thePPassword.style.display = "block";
-        thePPassword.innerHTML = "*Password không được để trống"
-        check = false;
-    }
+    if (!required(idEmail)) check= false
+
+    if (!required(idPassword)) check= false
+    
     return check;
 }
