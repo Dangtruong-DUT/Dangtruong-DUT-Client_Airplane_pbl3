@@ -29,13 +29,6 @@ $(document).ready( function(){
 
 
 
-// sự kiện varbar
-$(document).ready( function(){
-    $(".muaVeVaSanPham").click(function quaylaitrangchu() {
-        location.reload();
-    })
-});
-
 
 // kiểm tra tính đúng đắn của input
 

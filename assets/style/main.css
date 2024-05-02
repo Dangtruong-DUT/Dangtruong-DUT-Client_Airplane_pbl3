@@ -680,3 +680,19 @@ li:focus{
     padding-left: 10rem;
     text-align: right;
 }
+.chiTietKyGui__ThanhPhan{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30rem;
+    margin-left: -1.5rem;
+}
+.chiTietKyGui__ThanhPhan-HanhLyKyGui {
+    display: inline-flex;
+    text-align: center;
+    margin-right: 2rem;
+    font-size: large;
+    justify-content: space-around;
+}
+.HanhLyKyGui--thanhphan {
+    margin-right: 15px;
+}
