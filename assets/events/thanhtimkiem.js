@@ -285,25 +285,7 @@ function timkiemchuyenbay(diemKhoiHanh,diemden,departure_date,return_date,radio_
         the__noidungthongbao.innerHTML=txt_thongbao;
     }  else {
 
-         // su kien chuyen tu trang chu sang trang chon chuyen bay
-        $( '.trangchonchuyenbay').show();
-        $('.trangMuaVeMayBay').css ({
-            'margin': '0rem auto',
-            'margin-top': '2rem',
-            'margin-bottom': '5rem',
-            'color':' var(--text-greyer-color)'
-        })
-        $(".trangchu__timkiemchuyenbay").css({
-            "margin-top": "5rem",
-            "background-color": "var(--white-color)",
-            "background-image": "none",
-            "padding": "0"
-        });
-        $('.trangchu__slogan').css({
-            'display': 'none'
-        });
-
-        // 
+        
         document.getElementById('diemdi__thongtinhanhtrinh').innerHTML = document.getElementById(diemKhoiHanh).value;
         document.getElementById('diemden__thongtinhanhtrinh').innerHTML = document.getElementById(diemden).value;
 

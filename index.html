@@ -84,7 +84,7 @@
                         </div>
                         <div class="row ">
                             <div class="col-xs-12 col-sm-12">
-                                <button type="button" class="btnSubmitEnroll" value="Dangnhap" onclick=" return kiemtraInputDangNhap('memberEmailSignIn','memberPasswordSignIn')">Đăng Nhập</button>
+                                <button type="submit" class="btnSubmitEnroll" value="Dangnhap" onclick=" return kiemtraInputDangNhap('memberEmailSignIn','memberPasswordSignIn')">Đăng Nhập</button>
                             </div>
                         </div>
                         <div class="row ">
@@ -274,7 +274,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12">
-                                <button type="button" class="btnSubmitEnroll " value="Dangky" onclick=" return kiemtraInputDangKy('fulltNameSignUp','enroll-birth-date', 'enroll-birth-month', 'enroll-birth-year', 'companyCity','memberEmailSignUp','mobileNumberSignUp','memberPasswordSignUp','dongyVoiDieuKhoan','nhanthongbao')">Tạo Tài Khoản</button>
+                                <button type="submit" class="btnSubmitEnroll " value="Dangky" onclick=" return kiemtraInputDangKy('fulltNameSignUp','enroll-birth-date', 'enroll-birth-month', 'enroll-birth-year', 'companyCity','memberEmailSignUp','mobileNumberSignUp','memberPasswordSignUp','dongyVoiDieuKhoan','nhanthongbao')">Tạo Tài Khoản</button>
                             </div>
                         </div>
                     </div>
@@ -355,7 +355,7 @@
                         </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12">
-                                    <button type="button" class="btnSubmitformCSKH " value="Gui" onclick="return kiemtraInputPhieuHoTro('VanDe__CSKH','Email__CSKH','MaVe__CSKH','ChiTietYeuCau__CSKH')">Gửi</button>
+                                    <button type="submit" class="btnSubmitformCSKH " value="Gui" onclick="return kiemtraInputPhieuHoTro('VanDe__CSKH','Email__CSKH','MaVe__CSKH','ChiTietYeuCau__CSKH')">Gửi</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -510,7 +510,7 @@
                                 </div>
                                 <input type="hidden" id="diemKhoiHanh">
                                 <input type="hidden" id="diemden">
-                                <button type="button" class="timkiemchuyenbay__phantu timkiemchuyenbay__phantu--btnTimChuyenBay" onclick="return timkiemchuyenbay('diemKhoiHanh','diemden','departure-date','return-date','radio_round-trip','soHanhKach_nguoilon','soHanhKach_treem','diemKhoiHanh_ThanhTimKiem','diemDen_ThanhTimKiem')"> Tìm kiếm chuyến bay</button>
+                                <button type="submit" class="timkiemchuyenbay__phantu timkiemchuyenbay__phantu--btnTimChuyenBay" onclick="return timkiemchuyenbay('diemKhoiHanh','diemden','departure-date','return-date','radio_round-trip','soHanhKach_nguoilon','soHanhKach_treem','diemKhoiHanh_ThanhTimKiem','diemDen_ThanhTimKiem')"> Tìm kiếm chuyến bay</button>
                             </div>
                         </div>
                         <!-- /. kết thúc thanh tìm kiếm chuyến bay-->
@@ -519,308 +519,6 @@
                 </form>
             </div>
             <!--Kết thúc phần tìm kiếm trang chủ-->
-
-
-            <!-- chọn chuyến bay-->
-            <div class="trangchonchuyenbay row">
-                <div class="container">
-                    <div class="thongtinhanhtrinh row ">
-                        <div class="thongtinhanhtring-colum thongtinhanhtrinh--tieude row">
-                            <div class="thongtinhanhtrinh-tieude thongtinhanhtrinh-tieude--phancach" id="loaichuyenbay__thongtinhanhtrinh">Chuyến bay khứ hồi</div>
-                            <div class="thongtinhanhtrinh-tieude"><span id="songuoilon__thongtinhanhtrinh">1</span> <span>Người lớn  </span ><span id="sotreem__thongtinhanhtrinh">0</span><span class='thongtinhanhtrinh-tieude--phancach'>Trẻ em</span></div>
-                            <div class="thongtinhanhtrinh-tieude chonchuyendi" id="ngaydi__thongtinhanhtrinh">30/4/2024</div>
-                            <div class="thongtinhanhtrinh-tieude chonchuyenve" id="ngayve__thongtinhanhtrinh">33/4/2024</div>
-                        </div>
-                        <div class="thongtinhanhtring-colum row ">
-                            <div class="thongtinhanhtrinh-tenTP" id="diemdi__thongtinhanhtrinh">Ha Noi</div>
-                            <div class="icon chonchuyendi"><i class="fa-solid fa-plane"></i></div>
-                            <div class="icon chonchuyenve"><i class="fa-solid fa-plane fa-rotate-180"></i></div>
-                            <div class="thongtinhanhtrinh-tenTP" id="diemden__thongtinhanhtrinh">Sai Gon</div>
-                        </div>
-                    </div>  
-                    <!-- Filter bar -->
-                    <div class="filter-bar row ">
-                        <label for="price-filter"  class="filter-bar__item">Giá:</label>
-                        <select id="price-filter" class="filter-bar__item item-select">
-                            <option value="economy">Thấp nhất</option>
-                            <option value="business">Cao nhất</option>
-                        </select>
-                        <label for="time-filter"  class="filter-bar__item">Thời gian:</label>
-                        <select id="time-filter" class="filter-bar__item item-select">
-                            <option value="all">Tất cả</option>
-                            <option value="morning">Buổi sáng</option>
-                            <option value="afternoon">Buổi chiều</option>
-                            <option value="evening">Buổi tối</option>
-                        </select>
-                    </div>
-                    <!-- /.End Filter bar -->
-
-
-                    <!-- thanh tiêu đề trang chọn chuyến bay-->
-                    <div class="row ">
-                        <div class="col-xs-12  col-md-7 " >
-                            <div class="title row chonchuyendi" >
-                                <span >Chọn chuyến bay đi dành cho bạn!</span>
-                            </div>
-                            <div class="title row chonchuyenve" >
-                                <span >Chọn chuyến bay về dành cho bạn!</span>
-                            </div>
-                        </div>
-                    </div>
-                      <!-- /. kết thúc thanh tiêu đề trang chọn chuyến bay-->
-                
-                    <div class="row">
-
-                        <!-- box danh sách chuyến bay đi và bay về-->
-                        <div class="flight-list col-xs-12  col-md-7 ">
-                            <div class="box-flight-list">
-                                <div class="flight-list-header row">
-                                    <div class="flight-list-header__item ">Thời gian bay</div>
-                                    <div class="flight-list-header__item" >Thời Gian Đi - Đến</div>
-                                    <div class="flight-list-header__item">Mã Chuyến Bay</div>
-                                    <div class="flight-list-header__item">Giá</div>
-                                </div>
-                                <ul class="flight-lists row chonchuyendi">
-                                    <li class="flight-item chuyenbaydi" tabindex="0">
-                                        <div class="flight-option" >
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB01</div>
-                                            <div class="fare-options "><span id="flight-option__gia">600</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbaydi" tabindex="0">
-                                        <div class="flight-option" >
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB02</div>
-                                            <div class="fare-options "><span id="flight-option__gia">800</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbaydi" tabindex="0">
-                                        <div class="flight-option">
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB03</div>
-                                            <div class="fare-options "><span id="flight-option__gia">300</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbaydi" tabindex="0">
-                                        <div class="flight-option">
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB04</div>
-                                            <div class="fare-options "><span id="flight-option__gia">400</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbaydi" tabindex="0">
-                                        <div class="flight-option " >
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB05</div>
-                                            <div class="fare-options "><span id="flight-option__gia">800</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbaydi" tabindex="0">
-                                        <div class="flight-option">
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB06</div>
-                                            <div class="fare-options "><span id="flight-option__gia">300</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbaydi" tabindex="0">
-                                        <div class="flight-option">
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB07</div>
-                                            <div class="fare-options "><span id="flight-option__gia">500</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <ul class="flight-lists row chonchuyenve ">
-                                    <li class="flight-item chuyenbayve" tabindex="0">
-                                        <div class="flight-option" >
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB08</div>
-                                            <div class="fare-options "><span id="flight-option__gia">600</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbayve" tabindex="0">
-                                        <div class="flight-option" >
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB09</div>
-                                            <div class="fare-options "><span id="flight-option__gia">800</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbayve" tabindex="0">
-                                        <div class="flight-option">
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB10</div>
-                                            <div class="fare-options "><span id="flight-option__gia">300</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbayve" tabindex="0">
-                                        <div class="flight-option">
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB11</div>
-                                            <div class="fare-options "><span id="flight-option__gia">400</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbayve" tabindex="0">
-                                        <div class="flight-option" >
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB12</div>
-                                            <div class="fare-options "><span id="flight-option__gia">800</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbayve" tabindex="0">
-                                        <div class="flight-option">
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB13</div>
-                                            <div class="fare-options "><span id="flight-option__gia">300</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                    <li class="flight-item chuyenbayve" tabindex="0">
-                                        <div class="flight-option">
-                                            <div class="flight-item__content " id="flight-option__thoigianbay">16h 45m</div>
-                                            <div class="flight-item__content" id="flight-option__thoigiandi-den">7:AM - 4:15PM</div>
-                                            <div class="flight-item__content required" id="flight-option__maCB">CB13</div>
-                                            <div class="fare-options "><span id="flight-option__gia">500</span>.000VND</div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div> 
-                        </div>
-                         <!-- /. kết thúc box danh sách chuyến bay đi và bay về-->
-
-                    <!-- box chuyen bay được chọn-->
-                    <div class="col-xs-12  col-md-5">
-                        <div class="chyenbayduocchon">
-                            <div class="chyenbayduocchon__chuyenbay trangDienThongTinHanhKhach__muavemaybay" id="chuyenbayduocchon__chuyendi">
-                                <div class="chyenbayduocchon__title">
-                                    Chuyến Đi
-                                </div>
-                                <div class="chyenbayduocchon__chitietchuyenbay">
-                                    <div class="chyenbayduocchon__item">
-                                        <div class="chyenbayduocchon__item__part">
-                                            <span class="required" id="chuyendi__macb"></span>
-                                        </div>
-                                        <div class="chyenbayduocchon__item__part chyenbayduocchon__item__part--text-align-right">
-                                            <span class="chyenbayduocchon-thongtin" id="chuyendi__ngaybay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin" id="chuyendi__giobay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin" id="chuyendi__lichbay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin color-grey" id="chuyendi__hanhtrinhbay"></span>
-                                        </div>
-                                    </div>
-                                    <div class="chyenbayduocchon__item">
-                                        <div class="chyenbayduocchon__item__part"></div>
-                                        <div class="chyenbayduocchon__item__part">
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Giá vé :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyendi__giave"></span>.000VND</div>
-                                            </div>
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Thuế :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyendi__thue"></span>.000VND</div>
-                                            </div>
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Tổng :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyendi__tongtien"></span>.000VND</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="chyenbayduocchon__chuyenbay chonchuyenve trangDienThongTinHanhKhach__muavemaybay" id="chuyenbayduocchon__chuyenve">
-                                <div class="chyenbayduocchon__title"  >
-                                    Chuyến Về
-                                </div>
-                                <div class="chyenbayduocchon__chitietchuyenbay">
-                                    <div class="chyenbayduocchon__item">
-                                        <div class="chyenbayduocchon__item__part">
-                                            <span class="required" id="chuyenve__macb"> </span>
-                                        </div>
-                                        <div class="chyenbayduocchon__item__part chyenbayduocchon__item__part--text-align-right">
-                                            <span class="chyenbayduocchon-thongtin" id="chuyenve__ngaybay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin" id="chuyenve__giobay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin" id="chuyenve__lichbay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin color-grey" id="chuyenve__hanhtrinhbay"> </span>
-                                        </div>
-                                    </div>
-                                    <div class="chyenbayduocchon__item">
-                                        <div class="chyenbayduocchon__item__part"></div>
-                                        <div class="chyenbayduocchon__item__part">
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Giá vé :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyenve__giave"></span>.000VND</div>
-                                            </div>
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Thuế :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyenve__thue"></span>.000VND</div>
-                                            </div>
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Tổng :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyenve__tongtien"></span>.000VND</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--/. kết thuc  box chuyen bay được chọn-->
-
-                </div>
-                <div class="row chonchuyendi">
-                    <div class="thanhchuyentiep trangChonChuyenBay" id="thanhchuyentiep-chonchuyendi">
-                        <div class="tongtienchuyenbay">
-                            <span class="tongtien">Tổng Tiền:</span>
-                            <span class="tongtien" id="thanhchuyentiep-chonchuyendi-tongtien">0</span><span>.000VND</span>
-                        </div>
-                        <button type="button" class="_btnChuyenTiep" id="btn__chuyentiep-chonchuyendi">Tiếp theo</button>
-                    </div>
-                </div>
-                <div class="row chonchuyenve ">
-                    <div class="thanhchuyentiep trangChonChuyenBay" id="thanhchuyentiep-chonchuyenve ">
-                        <button type="button" class="_btnQuayLai" id="btn__quaylai-chonchuyenve">Quaylai</button>
-                        <div class="tongtienchuyenbay">
-                            <span class="tongtien">Tổng Tiền:</span>
-                            <span class="tongtien" id="thanhchuyentiep-chonchuyenve-tongtien">0</span><span>.000VND</span>
-                        </div>
-                        <button type="button" class="_btnChuyenTiep" id="btn__chuyentiep-chonchuyenve">Tiếp theo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /. kết thuc trang chon chuyen-->
 
     <!--/. Kết thúc phần tìm chuyến và chọn chuyến-->
         <!--phần chân trang-->

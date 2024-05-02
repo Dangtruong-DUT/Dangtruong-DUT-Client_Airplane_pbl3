@@ -52,10 +52,12 @@
     margin: 0rem 15px;
     margin-top: 1rem;
     background-color: var(--white-color);
-    padding-bottom: 5px;
     width: 100%;
     z-index: 1;
-    padding-right: 4rem;
+    padding-right: 2rem;
+    border: 0;
+    margin-bottom: 5rem;
+    
 }
 .navbar-brand img {
     height: 45px;
@@ -69,7 +71,7 @@
 .icon-bar{
     background-color: var(--white-color);
 }
-.navbar button,.dangky {
+.navbar button {
     color: var(--white-color);
     border-radius: 5px;
     background-color: var(--brand-color);
@@ -419,9 +421,6 @@
 
 
 /* trang chon chuyến bay */
-.trangchonchuyenbay{
-    display: none;
-}
 .thongtinhanhtrinh{
     background-color: rgb(98, 95, 236,10%);
     color: var(--white-color);
@@ -695,4 +694,18 @@ li:focus{
 }
 .HanhLyKyGui--thanhphan {
     margin-right: 15px;
+}
+
+/* Hết phần nhập thông tin khách hàng */
+
+/* Chọn chỗ ngồi  */
+
+.thongTinChoNgoi__thongtinhanhtrinh {
+
+    display: flex;
+    background-color: #27273F;
+    
+}
+.thongTinChoNgoi__thongtinhanhtrinh-thanhphan{
+    display: flex;
 }
