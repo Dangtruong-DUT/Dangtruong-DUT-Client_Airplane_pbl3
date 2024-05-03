@@ -4,7 +4,7 @@ var tenHK = [
     "Nguyễn Văn A",
 ];
 var soHK=2;
-var loaicb='MC';
+var loaicb='KH';
 
 $(document).ready(function(){
     $(".ghethuonggiachuyendi, .ghethuonggiachuyenve,.ghephothongchuyenve,.ghephothongchuyendi").click( function chonChoNgoi() {
@@ -40,18 +40,17 @@ $(document).ready(function(){
         }
     })
 })
-
+var index=1;
 function chuyenTiepChonChoNgoi() {
     var check = true;
     for (var i = 1; i <= soHK; i++) {
-        if (!($('#maSoGhe--chuyenveHK' + i).val() == "") && loaicb == 'KH') {
+        if (($('#maSoGhe--chuyenveHK' + i).val() == "") && loaicb == 'KH') {
             check = false;
         }
-        if (!($('#maSoGhe--chuyendiHK' + i).val() == "")) {
+        if (($('#maSoGhe--chuyendiHK' + i).val() == "")) {
             check = false;
         }
     }
-
     for (var i = 1; i <= soHK; i++) {
         var j = i + 1;
         var idchuyendiHK = 'chuyendiHK' + i;
@@ -63,6 +62,7 @@ function chuyenTiepChonChoNgoi() {
             document.getElementById('chuyenbayve--tieude').classList.remove('chuyenbaydangchon');
             document.getElementById('maybay__chuyenve').classList.add('hidden');
             document.getElementById('maybay__chuyendi').classList.remove('hidden');
+            index=i+1;
             break;
         } else if (!document.getElementById(idchuyendiHK).classList.contains('hidden') && loaicb == 'KH') {
             document.getElementById(idchuyendiHK).classList.add('hidden');
@@ -71,14 +71,16 @@ function chuyenTiepChonChoNgoi() {
             document.getElementById('chuyenbayve--tieude').classList.add('chuyenbaydangchon');
             document.getElementById('maybay__chuyenve').classList.remove('hidden');
             document.getElementById('maybay__chuyendi').classList.add('hidden');
+            index=i;
             break;
         } else if (!document.getElementById(idchuyendiHK).classList.contains('hidden') && loaicb == 'MC' && i != soHK) {
             document.getElementById('chuyendiHK' + j).classList.remove('hidden');
             document.getElementById(idchuyendiHK).classList.add('hidden');
+            index=i+1;
             break;
         }
     }
-    if (i != soHK) {
+    if (index != soHK) {
         check = false;
     }
 
@@ -99,6 +101,7 @@ function quayLaiChonChoNgoi() {
             $('#chuyenbaydi--tieude').removeClass('chuyenbaydangchon');
             document.getElementById('maybay__chuyenve').classList.remove('hidden');
             document.getElementById('maybay__chuyendi').classList.add('hidden');
+            index=i-1;
             break;
         }else
 
@@ -109,11 +112,13 @@ function quayLaiChonChoNgoi() {
             $('#chuyenbayve--tieude').removeClass('chuyenbaydangchon');
             document.getElementById('maybay__chuyendi').classList.remove('hidden');
             document.getElementById('maybay__chuyenve').classList.add('hidden');
+            index=i;
             break;
         } else
         if (!$(idchuyendiHK).hasClass('hidden') && loaicb=='MC' && (i!=1)) {
             var j=i-1;
             $('#chuyendiHK'+j).removeClass('hidden');
+            index=i-1;
             break;
         }
     }
