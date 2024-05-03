@@ -696,16 +696,38 @@ li:focus{
     margin-right: 15px;
 }
 
-/* Hết phần nhập thông tin khách hàng */
+/* /.Hết phần nhập thông tin khách hàng */
 
 /* Chọn chỗ ngồi  */
 
 .thongTinChoNgoi__thongtinhanhtrinh {
-
     display: flex;
     background-color: #27273F;
     
 }
-.thongTinChoNgoi__thongtinhanhtrinh-thanhphan{
-    display: flex;
+.maTranViTriChoNgoi{
+    background-color: #1513A0;
+    height: 23rem;
 }
+.thongTinChoNgoi {
+    width: 50%;
+}
+.thongTinChoNgoi__thongtinhanhtrinh-thanhphan{
+    color: var(--white-color);
+}
+.thongTinChoNgoi-tieude{
+    font-size: x-large;
+    color: var(--white-color);
+}
+.iconthongtinhanhtrinh {
+    font-size: x-large;
+    margin-top: 0.5rem;
+}
+.thongtinhanhtrinhchuyenve {
+    display: none;
+}
+.thongTinChoNgoi__LichBay{
+    display: flex;
+    padding: 3px;
+}
+/* /. het phan Chọn chỗ ngồi  */
