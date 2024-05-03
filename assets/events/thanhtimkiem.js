@@ -296,6 +296,8 @@ function timkiemchuyenbay(diemKhoiHanh,diemden,departure_date,return_date,radio_
         document.getElementById('ngayve__thongtinhanhtrinh').innerHTML = document.getElementById(return_date).value;
 
         document.getElementById('loaichuyenbay__thongtinhanhtrinh').innerHTML = loaichuyenbay;
+
+        
     }
     return check;
 }

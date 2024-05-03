@@ -16,12 +16,8 @@
 
         <link rel="stylesheet" href="./assets/style/base.css" /> 
         <link rel="stylesheet" href="./assets/style/main.css" /> 
+        <script src ="./assets/events/formDienThongTinHanhKhach.js"></script>
         <script src ="./assets/events/event_index.js"></script>
-        <script src ="./assets/events/formdangky.js"></script>
-        <script src ="./assets/events/formdangnhap.js"></script>
-        <script src ="./assets/events/formhotro.js"></script>
-        <script src ="./assets/events/thanhtimkiem.js"></script>
-        <script src ="./assets/events/chonchuyenbay.js"></script>
 
     </head>
     <body>
@@ -417,7 +413,8 @@
     </nav>
     <!--Kết thúc header-->
 
-        <!-- chọn chuyến bay-->
+        <!-- chọn chuyến bay-->\
+    <form action="" name="DienThongTinHanhKhach" method="post">
         <div class="trangDienThongTin row">
             <div class="container">
                 <div class="row">
@@ -430,47 +427,47 @@
                             <div class="desc desc--boxThongtin">Hành khách <span id="stt-HanhKhach__dienthongtinHK">1</span> (Người lớn)</div>
                             <div class="thanhNhapThongTin thanhNhapThongTin--row0">
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text"  class="theInput form-control" placeholder="Họ Và Tên*"/>
+                                    <input type="text"  class="theInput form-control hovaten__nhapthongtinHK" id="hovaten__nhapthongtinHKNL1" placeholder="Họ Và Tên*"/>
                                     <div class="warning"></div>
                                 </div>
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text" class="theInput form-control" placeholder="Ngày sinh*"/>
+                                    <input type="date" class="theInput form-control" id="ngaySinh__nhapthongtinHKNL1" placeholder="Ngày sinh*"/>
+                                    <div class="warning"></div>
                                     <div class="boxmota">
                                         <div class="desc desc--moTaNgaySinh">DD/MM/YY  Ví Dụ:25/5/1982</div>
-                                        <div class="warning"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="thanhNhapThongTin thanhNhapThongTin--row1">
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text" class="theInput form-control" placeholder="Email*"/>
+                                    <input type="text" class="theInput form-control" id="email__nhapthongtinHKNL1" placeholder="Email*"/>
                                     <div class="warning"></div>
                                 </div>
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text" class="theInput form-control" placeholder="Số Điện Thoại*"/>
-                                    <div class="warning"></div>
-                                </div>
-                            </div>
-                            <div class="thanhNhapThongTin">
-                                <div class="boxnhapthongtinHK">
-                                    <input type="text" class="theInput form-control" placeholder="Địa Chỉ"/>
-                                    <div class="warning"></div>
-                                </div>
-                                <div class="boxnhapthongtinHK">
-                                    <input type="text"  class="theInput form-control"placeholder="Quốc Tịch"/>
+                                    <input type="text" class="theInput form-control" id="SDT__nhapthongtinHKNL1" placeholder="Số Điện Thoại*"/>
                                     <div class="warning"></div>
                                 </div>
                             </div>
                             <div class="thanhNhapThongTin">
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text"  class="theInput form-control"placeholder="Giới Tính"/>
+                                    <input type="text" class="theInput form-control" id="DiaChi__nhapthongtinHKNL1" placeholder="Địa Chỉ"/>
+                                    <div class="warning"></div>
+                                </div>
+                                <div class="boxnhapthongtinHK">
+                                    <input type="text"  class="theInput form-control" id="QuocTich__nhapthongtinHKNL1" placeholder="Quốc Tịch"/>
+                                    <div class="warning"></div>
+                                </div>
+                            </div>
+                            <div class="thanhNhapThongTin">
+                                <div class="boxnhapthongtinHK">
+                                    <input type="text"  class="theInput form-control" id='GioiTinh__nhapthongtinHKNL1' placeholder="Giới Tính"/>
+                                    <div class="warning"></div>
                                     <div class="boxmota">
                                         <div class="desc desc--moTaNgaySinh">Nam/Nữ  Ví Dụ: Nam</div>
-                                        <div class="warning"></div>
                                     </div>
                                 </div>
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text" class="theInput form-control" placeholder="CCCD/CMND"/>
+                                    <input type="text" class="theInput form-control" id="CCCD__nhapthongtinHKNL1" placeholder="CCCD/CMND"/>
                                     <div class="warning"></div>
                                 </div>
                             </div>
@@ -479,33 +476,33 @@
                             <div class="desc desc--boxThongtin">Hành khách <span id="stt-HanhKhach__dienthongtinHK">2</span> (Trẻ em)</div>
                             <div class="thanhNhapThongTin thanhNhapThongTin--row0">
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text"  class="theInput form-control" placeholder="Họ Và Tên*"/>
+                                    <input type="text"  class="theInput form-control hovaten__nhapthongtinHK " id="hovaten__nhapthongtinHKTE1" placeholder="Họ Và Tên*"/>
                                     <div class="warning"></div>
                                 </div>
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text" class="theInput form-control" placeholder="Ngày sinh*"/>
+                                    <input type="date" class="theInput form-control" id="ngaySinh__nhapthongtinHKTE1" placeholder="Ngày sinh*"/>
+                                    <div class="warning"></div>
                                     <div class="boxmota">
                                         <div class="desc desc--moTaNgaySinh">DD/MM/YY  Ví Dụ:25/5/1982</div>
-                                        <div class="warning"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="thanhNhapThongTin thanhNhapThongTin--row1">
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text" class="theInput form-control" placeholder="Địa Chỉ"/>
+                                    <input type="text" class="theInput form-control" id="DiaChi__nhapthongtinHKTE1" placeholder="Địa Chỉ"/>
                                     <div class="warning"></div>
                                 </div>
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text"  class="theInput form-control"placeholder="Quốc Tịch"/>
+                                    <input type="text"  class="theInput form-control" id="QuocTich__nhapthongtinHKTE1" placeholder="Quốc Tịch"/>
                                     <div class="warning"></div>
                                 </div>
                             </div>
                             <div class="thanhNhapThongTin">
                                 <div class="boxnhapthongtinHK">
-                                    <input type="text"  class="theInput form-control"placeholder="Giới Tính"/>
+                                    <input type="text"  class="theInput form-control" id="GioiTinh__nhapthongtinHKTE1" placeholder="Giới Tính"/>
+                                    <div class="warning"></div>
                                     <div class="boxmota">
                                         <div class="desc desc--moTaNgaySinh">Nam/Nữ  Ví Dụ: Nam</div>
-                                        <div class="warning"></div>
                                     </div>
                                 </div>
                             </div>
@@ -516,7 +513,7 @@
                     <!-- box chuyen bay được chọn-->
                     <div class="col-xs-12  col-md-5 trangDienThongTin">
                         <div class="chyenbayduocchon ">
-                            <div class="chyenbayduocchon__chuyenbay trangDienThongTinHanhKhach__muavemaybay" id="chuyenbayduocchon__chuyendi">
+                            <div class="chyenbayduocchon__chuyenbay trangDienThongTinHanhKhach__muavemaybay" id="chuyenbayduocchon__chuyendi-DienThongTinHK">
                                 <div class="chyenbayduocchon__title">
                                     Chuyến Đi
                                 </div>
@@ -562,7 +559,7 @@
                             </div>
                             <br>
                             <br>
-                            <div class="chyenbayduocchon__chuyenbay chonchuyenve trangDienThongTinHanhKhach__muavemaybay" id="chuyenbayduocchon__chuyenve">
+                            <div class="chyenbayduocchon__chuyenbay  trangDienThongTinHanhKhach__muavemaybay" id="chuyenbayduocchon__chuyenve-DienThongTinHK">
                                 <div class="chyenbayduocchon__title"  >
                                     Chuyến Về
                                 </div>
@@ -625,27 +622,24 @@
                                 <div class="chiTietKyGui__ThanhPhan-HanhLyKyGui">Hành lý ký gửi</div>
                             </div>
                             <div class="chiTietKyGui__ThanhPhan desc--thongtinhanhkhach desc--boxThongtin">
-                                <div class="chiTietKyGui__ThanhPhan-TenHanhKhach">Nguyen Van A</div>
+                                <div class="chiTietKyGui__ThanhPhan-TenHanhKhach" id='tenHK__nhapthongtinHKNL1'>Nguyen Van A</div>
                                 <div class="chiTietKyGui__ThanhPhan-HanhLyKyGui">
-                                    <button type="button" class="HanhLyKyGui--thanhphan">-</button>
-                                    <div class="HanhLyKyGui--thanhphan" id="chiTietKyGui-SoLuongHanhKyGui">1</div>
-                                    <button type="button" class="HanhLyKyGui--thanhphan">+</button>
+                                    <button type="button" class="HanhLyKyGui--thanhphan  btn__GiamKhoiLuongKyGui">-</button>
+                                    <div class="HanhLyKyGui--thanhphan">1</div>
+                                    <button type="button" class="HanhLyKyGui--thanhphan btn__TangKhoiLuongKyGui">+</button>
+                                    <input type="hidden"  class="KhoiLuongKyGui" id="chiTietKyGui-SoLuongHanhKyGuiHKNL1" value="1"> 
                                 </div>
                             </div>
                             <div class="chiTietKyGui__ThanhPhan desc--thongtinhanhkhach desc--boxThongtin">
-                                <div class="chiTietKyGui__ThanhPhan-TenHanhKhach">Nguyen Van B </div>
+                                <div class="chiTietKyGui__ThanhPhan-TenHanhKhach" id='tenHK__nhapthongtinHKTE1'>Nguyen Van B </div>
                                 <div class="chiTietKyGui__ThanhPhan-HanhLyKyGui">
-                                    <button type="button" class="HanhLyKyGui--thanhphan">-</button>
-                                    <div class="HanhLyKyGui--thanhphan" id="chiTietKyGui-SoLuongHanhKyGui">1</div>
-                                    <button type="button" class="HanhLyKyGui--thanhphan">+</button>
+                                    <button type="button" class="HanhLyKyGui--thanhphan btn__GiamKhoiLuongKyGui">-</button>
+                                    <div class="HanhLyKyGui--thanhphan">1</div>
+                                    <button type="button" class="HanhLyKyGui--thanhphan btn__TangKhoiLuongKyGui">+</button>
+                                    <input type="hidden" class="KhoiLuongKyGui" id="chiTietKyGui-SoLuongHanhKyGuiHKTE1" value="1"> 
                                 </div>
                             </div>
-
-
                         </div>
-                    
-                    
-                    
                     </div> 
                     <div class="thongTinHanhKhach__HinhAnhMoTa row col-xs-12  col-md-5">
                         <img src="assets/images/hanhLy__NhapThongTinHK.png" class="img_HanhLy" alt="Hành Lý Cho Phép"> 
@@ -656,15 +650,16 @@
 
                 <!-- thanh chuyen tiep-->
                 <div class="row">
-                    <div class="thanhchuyentiep" id="thanhchuyentiep-chonchuyenve">
+                    <div class="thanhchuyentiep" id="thanhchuyentiep-DienThongTin">
                         <button type="button" class="_btnQuayLai" id="btn__quaylai-DienThongTin">Quaylai</button>
                         <div class="tongtienchuyenbay">
                             <span class="tongtien">Tổng Tiền:</span>
                             <span class="tongtien" id="thanhchuyentiep-DienThongTin-tongtien">0</span><span>.000VND</span>
                         </div>
-                        <button type="button" class="_btnChuyenTiep" id="btn__chuyentiep-DienThongTin">Tiếp theo</button>
+                        <button type="button" class="_btnChuyenTiep" id="btn__chuyentiep-DienThongTin" onclick="return submitDienThongTinHk(1,1)">Tiếp theo</button>
                     </div>
                 </div>
+    </form>
                 <!-- /.thanh chuyen tiep-->
 
                 <!--phần chân trang-->
