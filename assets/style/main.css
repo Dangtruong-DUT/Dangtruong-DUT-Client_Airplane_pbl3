@@ -762,7 +762,12 @@ li:focus{
     display: flex;
     background-color: rgb(203, 212, 230,30%);
     padding: 1rem 0rem;
+    box-sizing: border-box;
 }
+.thongtinchuyendixacnhan button:hover {
+    box-sizing: border-box;
+}
+
 .thongTinChoNgoi__thanhchuyentiep {
     display: flex;
     justify-content: space-around;
@@ -774,10 +779,12 @@ li:focus{
 .thongTinChoNgoi__thongtinxacnhan-title {
     font-size: small;
     color: var(--text-grey-color);
+    font-weight: bold;
 }
 .thongTinChoNgoi__thongtinxacnhan-ChiTiet {
     font-size: large;
-    color: var(--text-greyer-color);
+    font-weight: bold;
+    color: red;
 }
 .thongTinChoNgoi--loaiphothong {
     margin-left: 0.5rem;
@@ -826,6 +833,7 @@ ul.thongTinChoNgoi__mota-DanhSachUuDai--thuonggia {
 }
 .maTranViTriChoNgoi {
     background-image: url(../images/maybay.png);
+
 }
 .matran::-webkit-scrollbar {
     width: 4px;
@@ -842,11 +850,9 @@ ul.thongTinChoNgoi__mota-DanhSachUuDai--thuonggia {
 }
 .maTranViTriChoNgoi__thuonggia {
     margin: 0 auto;
-    margin-top: 0rem;
     border-radius: 0.5rem;
     background-color: var(--white-color);
-    width: 21rem;
-    margin-left: 25.5rem;
+    width: fit-content;
 }
 .maTranViTriChoNgoi__dong {
     display:flex;
@@ -859,21 +865,21 @@ ul.thongTinChoNgoi__mota-DanhSachUuDai--thuonggia {
     width: 30px;
     height: 40px;
     background-color: aquamarine;
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
     border-radius: 0.5rem;
     cursor: pointer;
 }
 .maTranViTriChoNgoi__dong__phant--chimuc {
     background-color: var(--white-color);
     line-height: 40px;
+    box-sizing: border-box;
 }
 .maTranViTriChoNgoi__phothong {
     margin: 0 auto;
     margin-top: 2rem;
     border-radius: 0.5rem;
     background-color: var(--white-color);
-    width: 21rem;
-    margin-left: 25.5rem;
+    width: fit-content;
 }
 .maTranViTriChoNgoi__dong__phantu--phothong {
     background-color: var(--brand-color);
@@ -901,5 +907,11 @@ ul.thongTinChoNgoi__mota-DanhSachUuDai--thuonggia {
 }
 .btn--chonngoi {
     margin-left: 10rem;
+}
+.cuaRaVao{
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-grey-color);
+    font-size: small;
 }
  /* /. het phan Chọn chỗ ngồi  */

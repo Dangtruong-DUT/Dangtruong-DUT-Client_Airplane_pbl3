@@ -59,6 +59,7 @@ button{
 ._btnChuyenTiep:hover{
     color: var(--brand-color);
     border: 2px solid var(--brand-color);
+    box-sizing: border-box;
     
 }
 ._btnQuayLai{
@@ -69,6 +70,7 @@ button{
 }
 ._btnQuayLai:hover{
     border: 1px solid var(--brand-color);
+    box-sizing: border-box;
     
 }
 .theInput{color: var(--text-grey-color);
