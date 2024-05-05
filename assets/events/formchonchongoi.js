@@ -4,7 +4,7 @@ var tenHK = [
     "Nguyễn Văn A",
 ];
 var soHK=2;
-var loaicb='KH';
+var loaicb='MC';
 
 $(document).ready(function(){
     $(".ghethuonggiachuyendi, .ghethuonggiachuyenve,.ghephothongchuyenve,.ghephothongchuyendi").click( function chonChoNgoi() {
@@ -117,7 +117,8 @@ function quayLaiChonChoNgoi() {
         } else
         if (!$(idchuyendiHK).hasClass('hidden') && loaicb=='MC' && (i!=1)) {
             var j=i-1;
-            $('#chuyendiHK'+j).removeClass('hidden');
+            $('#chuyendiHK'+i).addClass('hidden');
+            $('#chuyenveHK'+j).removeClass('hidden');
             index=i-1;
             break;
         }
