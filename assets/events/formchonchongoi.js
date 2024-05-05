@@ -4,7 +4,7 @@ var tenHK = [
     "Nguyễn Văn A",
 ];
 var soHK=2;
-var loaicb='MC';
+var loaicb='KH';
 
 $(document).ready(function(){
     $(".ghethuonggiachuyendi, .ghethuonggiachuyenve,.ghephothongchuyenve,.ghephothongchuyendi").click( function chonChoNgoi() {
@@ -339,7 +339,7 @@ function taoMaTranChoNgoichuyenveA32X(sogheThuongGia, soCotThuongGia, soghePhoTh
             } else if (((i==parseInt(soghePhoThong1/soCotPhoThong)) &&(j==0||j==soCotPhoThong))&&(parseInt(soghePhoThong1)%soCotPhoThong)==4) {
                 html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phant--chimuc"></div>';
             } else if (j!=parseInt(soCotPhoThong/2))
-                html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phantu--phothong  ghephothongchuyenve" id="PT1' + ''+(i + 1) +'' + (j + 1) + '"></div>';
+                html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phantu--phothong  ghephothongchuyenve" id="PT11' + ''+(i + 1) +'' + (j + 1) + '"></div>';
             else
                 html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phant--chimuc">'+sohang++ +'</div>';
         }
@@ -364,7 +364,7 @@ function taoMaTranChoNgoichuyenveA32X(sogheThuongGia, soCotThuongGia, soghePhoTh
             } else if (((i==parseInt(soghePhoThong2/soCotPhoThong)) &&(j==0||j==soCotPhoThong))&&(parseInt(soghePhoThong2)%soCotPhoThong)==4) {
                 html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phant--chimuc"></div>';
             } else if (j!=parseInt(soCotPhoThong/2))
-                html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phantu--phothong  ghephothongchuyenve" id="PT2' + ''+(i + 1) +'' + (j + 1) + '"></div>';
+                html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phantu--phothong  ghephothongchuyenve" id="PT22' + ''+(i + 1) +'' + (j + 1) + '"></div>';
             else
                 html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phant--chimuc">'+sohang++ +'</div>';
         }
@@ -389,7 +389,7 @@ function taoMaTranChoNgoichuyenveA32X(sogheThuongGia, soCotThuongGia, soghePhoTh
             } else if (((i==parseInt(soghePhoThong3/soCotPhoThong)) &&(j==0||j==soCotPhoThong))&&(parseInt(soghePhoThong3)%soCotPhoThong)==4) {
                 html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phant--chimuc"></div>';
             } else if (j!=parseInt(soCotPhoThong/2))
-                html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phantu--phothong  ghephothongchuyenve" id="PT3' + ''+(i + 1) +'' + (j + 1) + '"></div>';
+                html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phantu--phothong  ghephothongchuyenve" id="PT33' + ''+(i + 1) +'' + (j + 1) + '"></div>';
             else
                 html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phant--chimuc">'+sohang++ +'</div>';
         }

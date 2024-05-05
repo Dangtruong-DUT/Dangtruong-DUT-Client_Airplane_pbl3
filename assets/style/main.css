@@ -702,8 +702,7 @@ li:focus{
 
 .thongTinChoNgoi__thongtinhanhtrinh {
     display: flex;
-    background-color: #27273F;
-    
+    background-color: #27273F; 
 }
 .thongTinChoNgoi {
     width: 50%;
