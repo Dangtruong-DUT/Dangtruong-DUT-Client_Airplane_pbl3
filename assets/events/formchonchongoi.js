@@ -296,7 +296,7 @@ function taoMaTranChoNgoichuyenveA32X(sogheThuongGia, soCotThuongGia, soghePhoTh
             } else if (((i==parseInt(soCotThuongGia/soCotThuongGia)) &&(j==0||j==soCotThuongGia))&&(parseInt(soCotThuongGia)%soCotThuongGia)==4) {
                 html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phant--chimuc"></div>';
             } else if (j!=parseInt(soCotThuongGia/2))
-                html += '<div class="maTranViTriChoNgoi__dong__phantu   ghethuonggiachuyenve" id="TG1' + ''+(i + 1) +'' + (j + 1) + '"></div>';
+                html += '<div class="maTranViTriChoNgoi__dong__phantu   ghethuonggiachuyenve" id="TG11' + ''+(i + 1) +'' + (j + 1) + '"></div>';
             else
                 html += '<div class="maTranViTriChoNgoi__dong__phantu maTranViTriChoNgoi__dong__phant--chimuc">'+sohang++ +'</div>';
         }
