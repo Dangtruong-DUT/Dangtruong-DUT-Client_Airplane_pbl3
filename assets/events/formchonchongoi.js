@@ -118,7 +118,7 @@ function quayLaiChonChoNgoi() {
         if (!$(idchuyendiHK).hasClass('hidden') && loaicb=='MC' && (i!=1)) {
             var j=i-1;
             $('#chuyendiHK'+i).addClass('hidden');
-            $('#chuyenveHK'+j).removeClass('hidden');
+            $('#chuyendiHK'+j).removeClass('hidden');
             index=i-1;
             break;
         }
