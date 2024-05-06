@@ -218,9 +218,7 @@
 /*  phần tìm kiếm chuyến bay*/
 
 .trangchu__timkiemchuyenbay {
-    background-color: var(--brand-color);
     background-image: url("../images/backgroud1.0.jpg");
-    background-repeat: no-repeat;
     padding: 25rem 0;
 }
 .slogan {
@@ -699,13 +697,12 @@ li:focus{
 /* /.Hết phần nhập thông tin khách hàng */
 
 /* Chọn chỗ ngồi  */
-
+.thongTinChoNgoi{
+    height: 75rem;
+}
 .thongTinChoNgoi__thongtinhanhtrinh {
     display: flex;
     background-color: #27273F; 
-}
-.thongTinChoNgoi {
-    width: 50%;
 }
 .thongTinChoNgoi__thongtinhanhtrinh-thanhphan{
     color: var(--white-color);
@@ -826,12 +823,20 @@ ul.thongTinChoNgoi__mota-DanhSachUuDai--thuonggia {
 }
 
 /*  ma tran cho ngoi */
-.matran{
+.matran {
     overflow-y: auto;
     height: 75rem;
 }
+
+@media (max-width: 825.2px) {
+    .matran,thongTinChoNgoi{ 
+        height: 24rem;
+    }
+
+}
 .maTranViTriChoNgoi {
     background-image: url(../images/maybay.png);
+    background-position: center;
 
 }
 .matran::-webkit-scrollbar {
