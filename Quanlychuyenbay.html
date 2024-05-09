@@ -100,17 +100,19 @@
                   <!-- /. kết thúc thanh tiêu đề trang chọn chuyến bay-->
 
                 <div class="vungchua1">
+                    <form action="">
                     <!-- thanh tìm kiếm chuyến bay-->
                     <div class="timkiemchuyenbay timkiemchuyenbay--quanlychuyen">
                         <div class="timkiemchuyenbay__phantu" >
-                            <input type="text" class="input__machyen" placeholder="Mã Chuyến Bay?">
+                            <input type="text" class="input__machyen" placeholder="Mã Chuyến Bay?" id="timkiemchuyenMa">
                         </div>
 
                         <div class="timkiemchuyenbay__phantu" >
-                            <input type="date" >
+                            <input type="date" id="timkiemchuyendate">
                         </div>
-                            <button type="submit" class="timkiemchuyenbay__phantu timkiemchuyenbay__phantu--btnTimChuyenBay"> Tìm kiếm chuyến bay</button>
+                            <button type="submit" class="timkiemchuyenbay__phantu timkiemchuyenbay__phantu--btnTimChuyenBay" onclick="return hamkiemtratimkiemchuyen('timkiemchuyenMa','timkiemchuyendate')"> Tìm kiếm chuyến bay</button>
                     </div>
+                </form>
                     <!-- /. kết thúc thanh tìm kiếm chuyến bay-->
                     <button type="button" class="btn btn-primary btn_themchuyenbay" data-toggle="modal" data-target="#exampleModalCenter">+ Thêm chuyên bay</button>
                 </div>
