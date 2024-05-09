@@ -14,8 +14,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-        <link rel="stylesheet" href="./assets/style/base.css" /> 
         <link rel="stylesheet" href="./assets/style/main.css" /> 
+        <link rel="stylesheet" href="./assets/style/base.css" /> 
+        <script src ="./assets/events/formchonchongoi.js"></script>
         <script src ="./assets/events/event_index.js"></script>
         <script src ="./assets/events/formdangky.js"></script>
         <script src ="./assets/events/formdangnhap.js"></script>
@@ -89,7 +90,7 @@
                         </div>
                         <div class="row ">
                             <div class="col-xs-4 col-sm-12">
-                                <span class="desc">Bạn chưa có tài khoản thành viên? <a href="#" class="_dangky">Đăng Ký Tài Khoản</a></span>
+                                <span class="desc">Bạn chưa có tài khoản thành viên? <a href="#">Đăng Ký Tài Khoản</a></span>
                             </div>
                         </div>
                         <div class="row ">
@@ -415,113 +416,368 @@
             </div>
         </div>
     </nav>
+
     <!--Kết thúc header-->
-    <!-- Trang tim chuyen va chon chuyen-->
+    <div class="container-fluid trangKhachHang ">
+        <div class="row container trangKhachHang__content">
+            <div class="row ">
+                <div class="boxTaiKhoanKhachHang col-xs-3 col-md-3">
+                        <div class="boxmenuTaiKhoanKhachHang__daumuc boxmenuTaiKhoanKhachHang__daumuc--phanmuc"><i class="fa-solid fa-user-large iconphanmuc"></i><span class="">Tài Khoản Thành Viên</span></div>
 
-        <!--Tìm kiếm vé máy bay trang chủ-->
-        <div class="trangchu">
-            <form name="timchuyenbay" action="./trangChonChuyenBay.html" method="Post">
-                <div class="jumbotron text-center trangchu__timkiemchuyenbay">
-                    <div class="trangchu__slogan">
-                        <span class="slogan col-xs-12  col-md-12">"Fly the friendly skies"</span>
-                        <br> <br> <br> <br> <br> <br><br>
-                    </div>
+                    <ul class="boxmenuTaiKhoanKhachHang">
+                        <li class="boxmenuTaiKhoanKhachHang__phantu select__box">
+                            <div class="boxmenuTaiKhoanKhachHang__daumuc">Thông Tin Tài Khoản</div>
+                        </li>
+                        <li class="boxmenuTaiKhoanKhachHang__phantu">
+                            <div class="boxmenuTaiKhoanKhachHang__daumuc">Thông Tin Cá Nhân</div>
+                        </li>
+                        <li class="boxmenuTaiKhoanKhachHang__phantu">
+                            <div class="boxmenuTaiKhoanKhachHang__daumuc">Lịch Sử Giao Dịch</div>
+                        </li>
+                        <li class="boxmenuTaiKhoanKhachHang__phantu">
+                            <div class="boxmenuTaiKhoanKhachHang__daumuc">Quản Lý Chuyến Bay</div>
+                        </li>
+                    </ul>
+                </div>
 
-                    <!-- thanh tìm kiếm chuyến bay-->
-                    <div class="container">
-                        <div class="timkiemchuyenbay slideanim">
-                            <div class="timkiemchuyenbay__phantu timkiemchuyenbay--chonThanhPho" >
-                                <i class="fa-solid fa-plane-departure"></i>
-                                <input type="text" class="timchuyenbay__nhapthanhpho text_demkhoihanh" id="diemKhoiHanh_ThanhTimKiem" placeholder="Điểm khởi hành?" tabindex="0">
-                                <div class="timkiemchuyenbay__phantu-chonThanhPho timkiemchuyenbay__phantu-chonThanhPho--Diemdi">
-                                    <ul class="timkiemchuyenbay__phantu-list timkiemchuyenbay_thanhphodi">
-    
-                                    </ul>
+                <div class="col-xs-9 col-md-9">
+
+                    <!-- box thong tin tài khoản khach hang-->
+                    <div class="boxthongtinhachhang   " id="thongTinTaiKhoanKhachHang">
+                        <div class="boxthongtinhachhang__dong boxthongtinhachhang__dong--tieude ">Tài khoản</div>
+                        <div class="boxthongtinhachhang__dong">
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-regular fa-file"></i>
+                                            <div class="noidung-tieude">Mã số thành viên</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">JK00013728</div>
+                                </div>
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                
                                 </div>
                             </div>
-
-                            <div class="timkiemchuyenbay__phantu timkiemchuyenbay--chonThanhPho" >
-                                <i class="fa-solid fa-plane-arrival"></i>
-                                <input type="text" class="timchuyenbay__nhapthanhpho text_demden" id="diemDen_ThanhTimKiem"  placeholder="Điểm Đến?" >
-                                <div class=" timkiemchuyenbay__phantu-chonThanhPho timkiemchuyenbay__phantu-chonThanhPho--Diemden">
-                                    <ul class="timkiemchuyenbay__phantu-list timkiemchuyenbay_thanhphoden">
-                                        
-                                    </ul>
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-solid fa-shield-halved"></i>
+                                            <div class="noidung-tieude">password</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">Đặt mật khẩu để bảo vệ tài khoản của bạn</div>
                                 </div>
-                            </div>
-
-                            <div class="timkiemchuyenbay__phantu">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    <input type="text" class="btn_lichBay " id="lichBay_ThanhTimKiem"  readonly="readonly" placeholder="Ngày đi - ngày về">
-                                <div class="timkiemchuyenbay_phantu__chonlich">
-                                    <div class="timkiemchuyenbay__chonlich">
-                                        <label class="timkiemchuyenbay__chonlich__loaive" for="round-trip" >Khứ hồi</label>
-                                        <input class="timkiemchuyenbay__chonlich__loaive" type="radio"  name="loaiVe" value="Khứ hồi" checked="true" id="radio_round-trip">
-                                        <label class="timkiemchuyenbay__chonlich__loaive" for="one-way">Một chiều</label>
-                                        <input class="timkiemchuyenbay__chonlich__loaive" type="radio"  name="loaiVe" value="Một chiều" id="radio_one-way">
-                                        <input class="chonlich__btnXacnhan" type="button" value="Xác Nhận">
-                                    </div>
-                                    <div class="timkiemchuyenbay__chonlich">
-                                        <label   class="timkiemchuyenbay__chonlich-chonngay" for="departure-date">Ngày đi:</label>
-                                        <input  class="timkiemchuyenbay__chonlich-chonngay"   type="date" id="departure-date" name="departure-date" placeholder="Select Date.." readonly="readonly">
-                                    </div>
-                                    <div class="timkiemchuyenbay__chonlich timkiemchuyenbay__chonlich__ngayve">
-                                        <label class="timkiemchuyenbay__chonlich-chonngay" for="return-date">Ngày về:</label>
-                                        <input class="timkiemchuyenbay__chonlich-chonngay"  type="date" id="return-date" name="return-date" placeholder="Select Date.." readonly="readonly">
-                                    </div>
-                                    
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                    <a class="the-duong-dan">Set</a>
                                 </div>
-                            </div>
-
-                            <div class="timkiemchuyenbay__phantu timkiemchuyenbay__phantu--hienThiSoHanhKhach">
-                                <i class="fa fa-user"></i> 
-                                <input type="text"  class="HienthiSoHK" id="soHanhKach_ThanhTimKiemChuyenBay" placeholder="1 Người lớn" readonly="readonly" >
-                                <input type="hidden"  id="soHanhKach_nguoilon" value="1" >
-                                <input type="hidden"  id="soHanhKach_treem" value="0">
-                                    <div class="demSoKhachHang">
-                                        <table>
-                                            <div class="nguoiLon">
-                                                <tr>
-                                                    <td>
-                                                        <span>Người lớn:</span>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btCountNL">-</button>
-                                                        <span class="numberNL">1</span>
-                                                        <button type="button" class="btCountNL">+</button>
-                                                    </td>
-                                                </tr>
-                                            </div>
-                                            <div class="treEm">
-                                                <tr>
-                                                    <td>
-                                                        <span>Trẻ em:</span>
-                                                    </td>
-                                                    <td>
-                                                        <button type="button" class="btCountTE">-</button>
-                                                        <span class="numberTE">0</span>
-                                                        <button type="button" class="btCountTE">+</button>
-                                                    </td>
-                                                </tr>
-                                            </div>
-                                            <div class="timchuyenbay__demsohanhkhach__exit exit"><i class="fa-regular fa-circle-xmark"></i></div>
-                                        </table>
-                                    </div>
-                                </div>
-                                <input type="hidden" id="diemKhoiHanh">
-                                <input type="hidden" id="diemden">
-                                <button type="submit" class="timkiemchuyenbay__phantu timkiemchuyenbay__phantu--btnTimChuyenBay" onclick="return timkiemchuyenbay('diemKhoiHanh','diemden','departure-date','return-date','radio_round-trip','soHanhKach_nguoilon','soHanhKach_treem','diemKhoiHanh_ThanhTimKiem','diemDen_ThanhTimKiem')"> Tìm kiếm chuyến bay</button>
                             </div>
                         </div>
-                        <!-- /. kết thúc thanh tìm kiếm chuyến bay-->
-
+                        <div class="boxthongtinhachhang__dong">
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-regular fa-envelope"></i>
+                                            <div class="noidung-tieude">Link email</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">nd***281@gmail.com</div>
+                                </div>
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                    <a class="the-duong-dan">Update</a>
+                                </div>
+                            </div>
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-solid fa-phone-volume"></i>
+                                            <div class="noidung-tieude">Số điện thoại</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">+84375656647</div>
+                                </div>
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                    <a class="the-duong-dan">Update</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
-            </div>
-            <!--Kết thúc phần tìm kiếm trang chủ-->
+                    <!-- /. ket thuc box thong tin tài khoản khach hang-->
 
-    <!--/. Kết thúc phần tìm chuyến và chọn chuyến-->
-        <!--phần chân trang-->
+                    <!-- box thong tin cá nhân khach hang-->
+                    <div class="boxthongtinhachhang hidden" id="thongTinCaNhanKhachHang">
+                        <div class="boxthongtinhachhang__dong boxthongtinhachhang__dong--tieude ">Thông Tin Cá Nhân <div class="the-duong-dan-title"><i class="fa-solid fa-pen-to-square"></i><a class="the-duong-dan-title">Chỉnh sửa</a></div></div>
+                        <div class="boxthongtinhachhang__dong">
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-regular fa-user"></i>
+                                            <div class="noidung-tieude">Họ và tên</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">Trường Nguyễn Đăng</div>
+                                </div>
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                </div>
+                            </div>
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <div class="noidung-tieude">Ngày sinh</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">28/1/2004</div>
+                                </div>
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxthongtinhachhang__dong">
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-solid fa-shield-heart"></i>
+                                            <div class="noidung-tieude">Số hộ chiếu/CCCD</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">066204017546</div>
+                                </div>
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                </div>
+                            </div>
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-regular fa-map"></i>
+                                            <div class="noidung-tieude">Địa chỉ</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">Đak Lak</div>
+                                </div>
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxthongtinhachhang__dong">
+                            <div class="boxthongtinhachhang__thanhphan">
+                                <div class="boxthongtinhachhang__thanhphan-the-trai">
+                                    <div class="thanhphan-the-trai-tieude">
+                                        <div class="the-tieude">
+                                            <i class="fa-solid fa-venus-mars"></i>
+                                            <div class="noidung-tieude">Giới tính</div>
+                                        </div>
+                                    </div>
+                                    <div class="noidungthe">Nam</div>
+                                </div>
+                                <div class="boxthongtinhachhang__thanhphan-the-phai">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!--/. kết thúc box thong tin cá nhân khach hang-->
+
+                     <!--  box thong tin chuyen bay khach hang-->
+                    <div class="boxthongtinhachhang  hidden " id="thongChuyenBayKhachHang">
+                        <div class="vungchua">
+                            <div class="boxthongtinhachhang__dong boxthongtinhachhang__dong--tieude "><div class="tieude">Quản Lý chuyến Bay</div></div>
+                            <div class="boxthongtinhachhang__dong boxthongtinhachhang__dong-memu">
+                                <div class="boxthongtinhachhang__dong-muc select">Tất cả <span class="soluong">(3)</span></div>
+                                <div class="boxthongtinhachhang__dong-muc">Sắp tới <span class="soluong">(1)</span></div>
+                                <div class="boxthongtinhachhang__dong-muc">Hoàn thành <span class="soluong">(1)</span></div>
+                                <div class="boxthongtinhachhang__dong-muc">Đã hủy <span class="soluong">(1)</span></div>
+                            </div>
+                        </div>
+                         <!--vemaybay-->
+                        <div class="vungchua-vemaybay">
+
+
+                            <div class="vemaybay-mota">
+                                <div class="motatinhtrangve">
+                                    <div class="mave-tieude">Mã vé: <span class="noidung-mave">E7DKWE</span></div>
+                                    <div class="tinhtrang">Đã hủy</div>
+                                </div>
+                                <!--ve chuyen di-->
+                                <div class="vemaybay">
+                                    <div class="ve-tieude">Chuyến đi</div>
+                                    <div class="noidungve">
+                                        <div class="thoigiandi">T3,11/6/2024</div>
+                                        <div class="ve-thongtinchuyenbay">
+                                            <div class="thongtinhanhtrinhchitiet">
+                                                <div class="ve-thongtinhanhtrinh">
+                                                    <div class="ve-lotrinh">
+                                                        <div class="ve-thanhpho">
+                                                            TP.HCM
+                                                        </div>
+                                                        <div class="ve-thoigian">
+                                                            04:50
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="thongtinbay">
+                                                    <div class="thanhphan">2 giờ 10 phút</div>
+                                                    <div class="thanhphan icon-vemaybay"><i class="fa-solid fa-plane"></i></div>
+                                                    <div class="thanhphan">Bay Thẳng | <span class="chitietchuyenbay">Chi tiết </span><span class="icondong "><i class="fa-solid fa-angle-up fa-rotate-180"></i></span><span class="inconxo hidden"><i class="fa-solid fa-angle-up"></i></span></div>
+                                                </div>
+
+                                                <div class="ve-thongtinhanhtrinh">
+                                                    <div class="ve-lotrinh">
+                                                        <div class="ve-thanhpho">
+                                                            TP.HCM
+                                                        </div>
+                                                        <div class="ve-thoigian">
+                                                            04:50
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="thongtinsoluonghanhkhach">
+                                            1 Hành khách
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chitietve hidden">
+                                    <div class="chitietvenoidung">
+                                        <div class="chitietvenoidung__sohieuchuyenbay">
+                                            <div class="chitietchuyenbay__lichtrinh-icon thanhphan icon-vemaybay"><i class="fa-solid fa-plane"></i></div>
+                                            <div class="chitietchuyenbay__daumuc">Số hiệu chuyến bay: </div><span class="sohieuchuyenbay">VJ234</span>
+                                        </div>
+                                        <div class="chitietvenoidung__lichtrinhbay">
+                                            <div class="chitietchuyenbay__lichtrinh">
+                                                <div class="chitietchuyenbay__lichtrinh-icon icondiemkhoihanh"><i class="fa-solid fa-map-pin"></i></div>
+                                                <div class="lichtrinhbay diemkhoihanh">
+                                                    <div class="chitietchuyenbay__daumuc">Khởi hành: </div>
+                                                    <div>
+                                                        <span class="noidunglichtrinh">05:20, 09/07/2024 (Giờ địa phương)</span>
+                                                        <br>
+                                                        <span class="noidunglichtrinh">Hà Nội - Sân bay Nội Bài</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chitietchuyenbay__lichtrinh">
+                                                <div class="chitietchuyenbay__lichtrinh-icon icondiemden"><i class="fa-solid fa-location-dot"></i></div>
+                                                <div class="lichtrinhbay">
+                                                    <div class="chitietchuyenbay__daumuc">Đến: </div>
+                                                    <div>
+                                                        <span class="noidunglichtrinh">05:20, 09/07/2024 (Giờ địa phương)</span>
+                                                        <br>
+                                                        <span class="noidunglichtrinh">Hà Nội - Sân bay Nội Bài</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chitietchuyenbay__thongtinchuyen">
+                                                <span class="chitietchuyenbay__daumuc"> Thời gian: </span ><span class="thongtinchuyenbay__noidung">2 giờ 10 phút</span>
+                                                <span class="chitietchuyenbay__daumuc"> Airbus: </span><span class="thongtinchuyenbay__noidung">A320</span>
+                                                <span class="chitietchuyenbay__daumuc"> Khai thác bởi: </span ><span class="thongtinchuyenbay__noidung">Baconcuu airline</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/. kết thúc ve chuyen di-->
+
+                                <!-- ve chuyen ve-->
+                                <div class="vemaybay">
+                                    <div class="ve-tieude tieudechuyenve">Chuyến về</div>
+                                    <div class="noidungve">
+                                        <div class="thoigiandi">T3,11/6/2024</div>
+                                        <div class="ve-thongtinchuyenbay">
+                                            <div class="thongtinhanhtrinhchitiet">
+                                                <div class="ve-thongtinhanhtrinh">
+                                                    <div class="ve-lotrinh">
+                                                        <div class="ve-thanhpho">
+                                                            TP.HCM
+                                                        </div>
+                                                        <div class="ve-thoigian">
+                                                            04:50
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="thongtinbay">
+                                                    <div class="thanhphan">2 giờ 10 phút</div>
+                                                    <div class="thanhphan icon-vemaybay"><i class="fa-solid fa-plane"></i></div>
+                                                    <div class="thanhphan">Bay Thẳng | <span class="chitietchuyenbay">Chi tiết </span><span class="icondong "><i class="fa-solid fa-angle-up fa-rotate-180"></i></span><span class="inconxo hidden"><i class="fa-solid fa-angle-up"></i></span></div>
+                                                </div>
+
+                                                <div class="ve-thongtinhanhtrinh">
+                                                    <div class="ve-lotrinh">
+                                                        <div class="ve-thanhpho">
+                                                            TP.HCM
+                                                        </div>
+                                                        <div class="ve-thoigian">
+                                                            04:50
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="thongtinsoluonghanhkhach">
+                                            1 Hành khách
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chitietve hidden">
+                                    <div class="chitietvenoidung">
+                                        <div class="chitietvenoidung__sohieuchuyenbay">
+                                            <div class="chitietchuyenbay__lichtrinh-icon thanhphan icon-vemaybay"><i class="fa-solid fa-plane"></i></div>
+                                            <div class="chitietchuyenbay__daumuc">Số hiệu chuyến bay: </div><span class="sohieuchuyenbay">VJ234</span>
+                                        </div>
+                                        <div class="chitietvenoidung__lichtrinhbay">
+                                            <div class="chitietchuyenbay__lichtrinh">
+                                                <div class="chitietchuyenbay__lichtrinh-icon icondiemkhoihanh"><i class="fa-solid fa-map-pin"></i></div>
+                                                <div class="lichtrinhbay diemkhoihanh">
+                                                    <div class="chitietchuyenbay__daumuc">Khởi hành: </div>
+                                                    <div>
+                                                        <span class="noidunglichtrinh">05:20, 09/07/2024 (Giờ địa phương)</span>
+                                                        <br>
+                                                        <span class="noidunglichtrinh">Hà Nội - Sân bay Nội Bài</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chitietchuyenbay__lichtrinh">
+                                                <div class="chitietchuyenbay__lichtrinh-icon icondiemden"><i class="fa-solid fa-location-dot"></i></div>
+                                                <div class="lichtrinhbay">
+                                                    <div class="chitietchuyenbay__daumuc">Đến: </div>
+                                                    <div>
+                                                        <span class="noidunglichtrinh">05:20, 09/07/2024 (Giờ địa phương)</span>
+                                                        <br>
+                                                        <span class="noidunglichtrinh">Hà Nội - Sân bay Nội Bài</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chitietchuyenbay__thongtinchuyen">
+                                                <span class="chitietchuyenbay__daumuc"> Thời gian: </span ><span class="thongtinchuyenbay__noidung">2 giờ 10 phút</span>
+                                                <span class="chitietchuyenbay__daumuc"> Airbus: </span><span class="thongtinchuyenbay__noidung">A320</span>
+                                                <span class="chitietchuyenbay__daumuc"> Khai thác bởi: </span ><span class="thongtinchuyenbay__noidung">Baconcuu airline</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/. kết thúc ve chuyen ve-->
+                            </div>
+                            <!--/. kết thúc vemaybay-->
+                        </div>
+                        <!--  /kết thúc box thong tin chuyen bay khach hang-->
+                    </div>
+                    <!--/. kết thúc box thong tin cá nhân khach hang-->
+                </div>
+            </div>
+        </div>
+    </div>  
+
+
+
+     <!--phần chân trang-->
      <div class="container">
         <div class="row">
             <div class="chanTrang">
@@ -573,5 +829,4 @@
                     <li class=" footer--item-copyright"> <span>© 2024 Baconcuu </span></li>
                 </ul>
         </div>
-    </body>
-</html>
+</body>

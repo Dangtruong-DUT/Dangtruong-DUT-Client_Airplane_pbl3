@@ -49,14 +49,12 @@
     right: 14%;
 }
 .navbar {
-    margin: 0rem 15px;
     margin-top: 1rem;
     background-color: var(--white-color);
     width: 100%;
     z-index: 1;
-    padding-right: 2rem;
     border: 0;
-    margin-bottom: 5rem;
+    margin-bottom: 0;
     
 }
 .navbar-brand img {
@@ -230,6 +228,7 @@
 }
 
 .timkiemchuyenbay{
+    margin-top: 2rem;
     width: 100%;
     position: relative;
     display: flex;
@@ -919,3 +918,524 @@ ul.thongTinChoNgoi__mota-DanhSachUuDai--thuonggia {
     font-size: small;
 }
  /* /. het phan Chọn chỗ ngồi  */
+
+
+ /* trang khach hang*/
+.trangKhachHang {
+    padding: 2rem 0;
+    background-color: #F0F2F5;
+    margin-bottom: 5rem;
+    min-height: 65rem;
+}
+.trangKhachHang__content {
+    margin: 0 auto;
+}
+.boxTaiKhoanKhachHang{
+    margin-top: 3rem;
+}
+.boxmenuTaiKhoanKhachHang {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--black-color);
+    padding: 20px 0 ;
+    background-color: var(--white-color);
+    border-radius: 0.5rem;
+}
+.boxmenuTaiKhoanKhachHang__daumuc--phanmuc {
+    padding: 10px 0;
+    background-color: var(--white-color);
+    padding-left: 20px;
+    font-size: larger;
+}
+.iconphanmuc{
+    font-size: x-large;
+    color: var(--brand-color);
+    margin-right: 1rem;
+ }
+.boxmenuTaiKhoanKhachHang__phantu {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    background-color: var(--white-color);
+    font-weight: bold;
+    border-left: 3px solid #fff;
+    padding: 10px 0 ;
+    padding-left: 20px;
+    align-items: center;
+}
+.boxthongtinhachhang {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-color);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+.boxthongtinhachhang__dong {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    
+}
+.boxthongtinhachhang__dong--tieude {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 26px;
+    color: #0f294d;
+    font-weight: bold;
+}
+.the-duong-dan-title {
+    color: #3264FF;
+    font-size: small;
+    cursor: pointer;
+}
+.boxthongtinhachhang__dong-icon {
+    margin-right: 2rem;
+}
+.boxthongtinhachhang__thanhphan {
+    background: #f5f7fa;
+    padding: 16px;
+    border-radius: 4px;
+    max-width: 413px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.noidungthe {
+    color: #0f294d;
+    font-weight: bold;
+    line-height: 22px;
+}
+.the-duong-dan {
+    color: #3264FF;
+    cursor: pointer;
+}
+.boxthongtinhachhang__thanhphan-the-trai {
+    flex: 1;
+    font-size: 16px;
+}
+.thanhphan-the-trai-tieude {
+    display: flex;
+}
+.the-tieude {
+    display: flex;
+    color: #455873;
+    line-height: 22px;
+    margin-bottom: 4px;
+}
+.noidung-tieude {
+    margin-left: 5px;
+    transform: translateY(-10%);
+}
+.noidungmuc {
+    color: var(--black-color);
+    margin-left: 2rem;
+}
+.select__box {
+    background-color: #eef5ff;
+    border-left-color: #3264FF;
+    color: #3264FF;
+}
+
+.mucan {
+    color:  var(--text-grey-color);
+}
+.boxthongtinhachhang__dong--button {
+    display: flex;
+    justify-content: end;
+}
+.boxthongtinhachhang__dong--button button {
+    margin-left: 2rem;
+    width: 10rem;
+    height: 3rem;
+}
+.boxthongtinhachhang__dong-memu {
+    grid-template-columns: repeat(4, 1fr);
+    font-size: medium;
+    text-align: center;
+    background-color: #f5f7fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.select {
+    color: var(--brand-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--brand-color);
+}
+/* ve may bay*/
+#thongChuyenBayKhachHang {
+    background-color: rgb(7, 92, 183,10%);
+    min-height: 65rem;
+}
+.vungchua {
+    background-color: var(--white-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.vungchua-vemaybay {
+    margin-top: 15px;
+}
+.motatinhtrangve {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+.noidungve {
+    padding: 10px 20px;
+    background-size: cover;
+    background-image: url(../images/summary-desktop.5c2c63af.webp);
+    background-position: left 63%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.noidung-mave {
+    font-weight: bold;
+}
+.tinhtrang {
+    color: red;
+}
+@media (min-width: 1024px) {
+        .noidungve {
+            padding: 10px 35px 30px 49px;
+            background-image: url(../images/summary-desktop.5c2c63af.webp);
+            background-position: left 70%;
+        }
+}
+@media (min-width: 769px) {
+        .noidungve {
+            padding: 10px 35px;
+        }
+}
+
+.ve-tieude  {
+    background-color: #C9EFFF;
+}
+@media (min-width: 1024px) {
+    .ve-tieude  {
+        padding-left: 30px;
+        padding-right: 0;
+    }
+}
+
+.ve-tieude {
+    height: 40px;
+    display: flex;
+    padding: 0px 12px;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.thoigiandi {
+    color: #000000;
+    font-size: 14px;
+    font-family: KoHo, sans-serif;
+    line-height: 1.33;
+}
+
+@media (min-width: 1200px) {
+    .thoigiandi {
+        font-size: 18px;
+    }
+}
+.ve-thongtinchuyenbay {
+    position: relative;
+    margin-top: 5px;
+}
+@media (min-width: 1024px) {
+    .ve-thongtinchuyenbay {
+        display: flex;
+        margin-top: 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.thongtinhanhtrinhchitiet {
+    display: flex;
+    flex-grow: 1;
+    background: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+}
+.thongtinbay {
+    text-align: center;
+    color: #6D6E71;
+}
+
+.thongtinsoluonghanhkhach {
+    margin: 0px -10px;
+    display: flex;
+    padding: 10px 0px;
+    transform: translateY(-3px);
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+@media (min-width: 1024px) {
+    .thongtinsoluonghanhkhach {
+        margin: 0;
+        padding: 0;
+        align-items: flex-start;
+        border-left: 1px solid #D1D3D4;
+        flex-shrink: 0;
+        margin-left: 39px;
+        padding-left: 20px;
+        flex-direction: column;
+    }
+}
+.ve-thanhpho {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+@media (min-width: 1200px) {
+    .ve-thanhpho {
+        font-size: 32px;
+    }
+}
+.ve-thoigian {
+    font-weight: 400;
+    color: #333333;
+}
+
+@media (min-width: 1200px) {
+    .ve-thoigian {
+        font-size: 24px;
+    }
+}
+.inconxo,.icondong {
+    color: #3264FF;
+    font-size: large;
+    cursor: pointer;
+}
+.icon-vemaybay {
+    color: #1513A0;
+    font-size: larger;
+}
+
+
+.chitietve {
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+    transform: translateY(-5px);
+    background: #ffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+@media (min-width: 1024px) {
+    .chitietve {
+        padding: 10px 35px 49px 20px;
+    }
+}
+.chitietvenoidung__sohieuchuyenbay {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+
+.chitietchuyenbay__lichtrinh{
+    margin: 1.3rem 0;
+}
+@media (min-width: 1200px) {
+
+    .chitietchuyenbay__lichtrinh {
+        display: flex;
+    }
+}
+.chitietchuyenbay__daumuc {
+    font-size: 15px;
+    font-weight: 500;
+    min-width:  85px ;
+}
+
+.noidunglichtrinh {
+    font-weight: 600;
+    color: var(--black-color);
+    font-size: 15px;
+ }
+.chitietchuyenbay__thongtinchuyen {
+    display: flex;
+        margin-left: 12px;
+}
+@media (min-width: 1200px) {
+    .chitietchuyenbay__thongtinchuyen {
+        margin-left: 100px;
+    }
+}
+.thongtinchuyenbay__noidung {
+    color: red;
+    font-size: 15px;
+    margin: 0 1rem;
+}
+.lichtrinhbay {
+    display: flex;
+}
+.diemkhoihanh {
+   
+}
+.noidunglichtrinh {
+    padding-bottom: 2px;
+}
+.icondiemkhoihanh {
+    margin-top: 0;
+    padding-bottom: 2rem;
+    color: red;
+}
+.icondiemden {
+    color: aqua;
+}
+.chitietchuyenbay__lichtrinh-icon {
+    min-width: 25px;
+}
+.sohieuchuyenbay {
+    color: red;
+    font-weight: bold;
+}
+.tieudechuyenve {
+    margin-top: 1rem;
+    background-color: aquamarine;
+}
+ /* /.hết trang khách hàng */
+
+
+ /* trang quan lý chuyen bay*/
+
+  /* /. hếttrang quan lý chuyen bay*/
+
+ .quanlychuyen-option {
+    width: 100%;
+    display: flex;
+    color: var(--text-greyer-color);
+    background-color: var(--white-color);
+    text-align: center;
+    float: left;
+    height: 4rem;
+    
+  }
+  .quanlychuyen-option-item {
+    flex: 1;
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    color: #27273F;
+  }
+.quanlychuyen-option-item:first-child {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.quanlychuyen-option-item:last-child {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.box-quanlychuyenbay {
+    box-shadow: -2px 1px 9px -2px #c9b7b7;
+    color: #7C8DB0;
+  }
+.quanlychuyen-item {
+    margin: 0 ;
+    padding: 0.5rem 1.5rem;
+  }
+.quanlychuyen-option :hover {
+    background-color: none;
+}
+.btnTacVu {
+    background-color: var(--white-color);
+    width: 4rem;
+    height: 2rem;
+    margin: 0 5px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+.btnTacVu:hover {
+    background-color: #58a5e8;
+}
+.quanlychuyen-option-item-tacvu {
+    display: flex;
+    justify-content: center;
+}
+.quanlychuyenbay--title {
+    font-size: x-large;
+    font-weight: bold;
+    color: var(--brand-color);
+}
+.timkiemchuyenbay--quanlychuyen {
+    width: fit-content;
+}
+.quanlychuyenbay {
+    margin: 0 auto;
+}
+.timchuyenbay__nhapmachuyenbay {
+    margin: 0 2rem;
+}
+.timkiemchuyenbay--quanlychuyen {
+    margin-top: 0rem;
+}
+.vungchua1{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin: 4rem 0;
+}
+.btn_themchuyenbay {
+    height: 4rem;
+    color: #190F8A;
+    background-color: #BCB7F5;
+}
+.input__machyen {
+    margin-left: 2rem;
+}
+/* box them chuyen bay*/
+.themchuyenbay {
+    background-color: var(--white-color);
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: 0.5rem;
+    border: 1px solid var(--vien-color);
+    padding: 2rem;
+}
+.themchuyenbay__dong {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+.themchuyenbay-title {
+    color: var(--brand-color);
+    font-weight: bold;
+    font-size: x-large;
+}
+.themchuyenbay__phantu {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f7fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.label {
+    color: var(--text-greyer-color);
+    font-size: small;
+    text-align: left;
+}
+.theselect--themchuyenbay,.themchuyenbay__dong input {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.btnthemchuyenbay {
+    width: 100%;
+    margin-top: 1rem;
+    height: 3rem;
+}
