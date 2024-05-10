@@ -1,9 +1,22 @@
+var giaHanhLy= 32;
+var tongtien =0 ;
+var giachuyendi=0 ;
+var giachuyenve=0;
+$(document).ready( function(){
+
+ giachuyendi = parseFloat($('#chuyendi__tongtien').text());
+ giachuyenve = parseFloat($('#chuyenve__tongtien').text());
+tongtien = giachuyendi+giachuyenve;
+$('#thanhchuyentiep-DienThongTin-tongtien').text(tongtien);
+})
 $(document).ready( function(){
     $('.btn__GiamKhoiLuongKyGui').click( function GiamKLKyGui() {
         var theKLHangKyGui=$(this).next();
         var KhoiLuongHangKyGui = parseInt(theKLHangKyGui.text());
         if (KhoiLuongHangKyGui>1) {
             KhoiLuongHangKyGui--;
+            tongtien -=giaHanhLy;
+            $('#thanhchuyentiep-DienThongTin-tongtien').text(tongtien);
         }
         theKLHangKyGui.text(KhoiLuongHangKyGui);
         $(this).siblings('.KhoiLuongKyGui').val(KhoiLuongHangKyGui);
@@ -15,6 +28,8 @@ $(document).ready( function(){
         var theKLHangKyGui=$(this).prev();
         var KhoiLuongHangKyGui = parseInt(theKLHangKyGui.text());
         KhoiLuongHangKyGui++;
+        tongtien += giaHanhLy;
+        $('#thanhchuyentiep-DienThongTin-tongtien').text(tongtien);
         theKLHangKyGui.text(KhoiLuongHangKyGui);
         $(this).siblings('.KhoiLuongKyGui').val(KhoiLuongHangKyGui);
     })

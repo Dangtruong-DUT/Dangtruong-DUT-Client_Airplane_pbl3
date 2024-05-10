@@ -22,3 +22,19 @@ function hamkiemtratimkiemchuyen(timkiemchuyenMa,timkiemchuyendate) {
     }    
     return check;
 }
+
+$(document).ready(function() {
+
+    $(".btn__suathongtinchuyen").on("mousedown", function() {
+        var theMSCB= $(this).parent().siblings(".mscb").text();
+        $("#MaCBChinhSua").val(theMSCB);
+    });
+})
+
+$(document).ready(function() {
+
+    $(".btn__xoachuyen").on("mousedown", function() {
+        var theMSCB= $(this).parent().siblings(".mscb").text();
+        $("#MaCBXoa").val(theMSCB);
+    });
+})

@@ -248,6 +248,7 @@
     margin: 0 5px;
     border-radius: 0.5rem;
     cursor: pointer;
+    border: 1px solid var(--vien-color);
   }
 .btnTacVu:hover {
     background-color: #58a5e8;
@@ -330,3 +331,26 @@
     margin-top: 1rem;
     height: 3rem;
 }
+.btnthemchuyenbay:hover {
+    color: var(--white-color);
+    background-color: #190F8A;
+}
+.macbChinhsua{
+    color: red;
+    font-weight: bold;
+}
+.chantrangxoachuyen {
+    padding: 0;
+    padding-top: 1rem;
+}
+.btnxacnhanxoachuyen:hover {
+    background-color: #190F8A;
+}
+#MaCBXoa{
+    border: 1 solid var(--vien-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: red;
+    
+}
+/* /. kết thúc box them chuyen bay*/
