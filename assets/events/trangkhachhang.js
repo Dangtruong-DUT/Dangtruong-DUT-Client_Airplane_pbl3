@@ -266,25 +266,7 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// JavaScript code
 document.addEventListener("DOMContentLoaded", function() {
     // Lấy ra nút "Chỉnh sửa"
     var editButton = document.getElementById("chinhsuathongtinkhachhang");
@@ -303,11 +285,19 @@ document.addEventListener("DOMContentLoaded", function() {
         var dobParts = dob.split('/');
         var formattedDob = dobParts[2] + '-' + dobParts[1] + '-' + dobParts[0];
 
-        // Đẩy dữ liệu vào modal fade
-        document.getElementById("inputNameKhachhang").value = name;
-        document.getElementById("inputNgaySinhKhachhang").value = formattedDob;
-        document.getElementById("inputDiaChiKhachhang").value = address;
-        document.getElementById("inputGioiTinhKhachhang").value = gender;
+        // Đẩy dữ liệu vào modal fade nếu trường không rỗng
+        if (name.trim() !== "") {
+            document.getElementById("inputNameKhachhang").value = name;
+        }
+        if (dob.trim() !== "") {
+            document.getElementById("inputNgaySinhKhachhang").value = formattedDob;
+        }
+        if (address.trim() !== "") {
+            document.getElementById("inputDiaChiKhachhang").value = address;
+        }
+        if (gender.trim() !== "") {
+            document.getElementById("inputGioiTinhKhachhang").value = gender;
+        }
     });
 
     // Lấy ra nút "Lưu Thay Đổi"
@@ -321,18 +311,24 @@ document.addEventListener("DOMContentLoaded", function() {
         var newAddress = document.getElementById("inputDiaChiKhachhang").value;
         var newGender = document.getElementById("inputGioiTinhKhachhang").value;
 
-        // Chuyển định dạng ngày sinh từ yyyy-mm-dd sang dd/mm/yyyy
-        var newDobParts = newDob.split('-');
-        var formattedNewDob = newDobParts[2] + '/' + newDobParts[1] + '/' + newDobParts[0];
-
-        // Đẩy dữ liệu vào box thông tin cá nhân
-        document.getElementById("TenKhachHang").textContent = newName;
-        document.getElementById("NgaySInhKhachHang").textContent = formattedNewDob;
-        document.getElementById("DiaChiKhachHang").textContent = newAddress;
-        document.getElementById("GioiTinhKhachHang").textContent = newGender;
+        // Kiểm tra trường rỗng trước khi cập nhật
+        if (newName.trim() !== "") {
+            document.getElementById("TenKhachHang").textContent = newName;
+        }
+        if (newDob.trim() !== "") {
+            // Chuyển định dạng ngày sinh từ yyyy-mm-dd sang dd/mm/yyyy
+            var newDobParts = newDob.split('-');
+            var formattedNewDob = newDobParts[2] + '/' + newDobParts[1] + '/' + newDobParts[0];
+            document.getElementById("NgaySInhKhachHang").textContent = formattedNewDob;
+        }
+        if (newAddress.trim() !== "") {
+            document.getElementById("DiaChiKhachHang").textContent = newAddress;
+        }
+        if (newGender.trim() !== "") {
+            document.getElementById("GioiTinhKhachHang").textContent = newGender;
+        }
 
         // Đóng modal fade
         $('#suathongtinkhachhang').modal('hide');
     });
 });
-
