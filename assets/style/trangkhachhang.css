@@ -1,13 +1,21 @@
-
  /* trang khach hang*/
+ .trangKhachHang__content {
+    margin: 0 auto;
+    background-color: rgb(188, 183, 245,50%);
+    padding: 3rem 0;
+    min-height: 100vh;width: 100%;
+}
  .trangKhachHang {
-    padding: 2rem 0;
+    background-image: url(https://img2.thuthuat123.com/uploads/2020/05/12/hinh-anh-bay-tren-troi-la-may-bay_111631532.jpg);
+    background-position: center;
+    background-size: cover;
     background-color: #F0F2F5;
     margin-bottom: 5rem;
-    min-height: 65rem;
-}
-.trangKhachHang__content {
-    margin: 0 auto;
+    background-attachment: fixed;
+    display: flex;
+    overflow: hidden;
+    min-height: 100vh;
+    flex-direction: column;
 }
 .boxTaiKhoanKhachHang{
     margin-top: 3rem;
@@ -42,6 +50,7 @@
     padding: 10px 0 ;
     padding-left: 20px;
     align-items: center;
+    cursor: pointer;
 }
 .boxthongtinhachhang {
     margin-top: 3rem;
@@ -404,14 +413,23 @@
 }
 .menubar__lichsugiaodich {
     display: inline-flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-top: 1rem;
+    width: 100%;
+    background-color: #f5f7fa;
+    padding: 1rem;
+    border-radius: 0.2rem;
 }
 .thetimkiemtheongay__lichsugiaodich {
     display: inline-flex;
 }
 .tieude__lichsugiaodich {
     margin-right: 1rem;
+    background-color: var(--brand-color);
+    color:  var(--white-color);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: -2px 1px 9px -2px #222223 ;
 }
 .boxthongtinkhachhhang__hoadon {
     margin-top: 3rem;
@@ -433,13 +451,389 @@
     text-align: center;
 }
 .menubar__lichsugiaodich--button {
-    background-color: #BCB7F5;
-    color: var(--text-greyer-color);
+    background-color: var(--brand-color);
+    color: var(--white-color);
     box-shadow: -2px 1px 2px -2px #27273F ;
     margin: 0 1rem;
     border-radius: 0.3rem;
+    padding: 1rem;
 }
 .hoadonbanhang{
-    background-color: #C9EFFF;
+    margin-top:1rem ;
+    background-color: rgb(201, 239, 255,90%);
+    padding: 1.9rem;
+    font-size: medium;
+    border-radius: 0.3rem;
+    width: fit-content;
+    box-shadow:-2px 1px 9px -2px #4e4ee3 ;
+}
+.phanthanhoadon {
+    display: flex;
+    flex-direction: column;
+}
+.thanhphanhoadon-dong{
+    display: flex;
+    flex-direction: row;
+}
+.thanhphanhoadon__daumuc{
+    color: var(--black-color);
+    padding-right: 5px;
+}
+.thanhphanhoadon__noidung {
+    color:var(--text-greyer-color)
+}
+.tieudehoadon {
+    border-bottom:  2px dashed var(--brand-color);
+}
+.phantongtienhoadon {
+    padding-top: 5px;
+    border-top:  2px dashed var(--brand-color);
+}
+.vungchuahoadon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap-reverse;
+}
+.thanhphanhoadon__noidung--tieude {
+    color:rgb(243, 64, 64);
+    font-weight: bold;
+}
+.thanhphanhoadon__noidung--tiongtien {
+    font-size: larger;
+    font-weight: bold;
+}
+.boxmenuTaiKhoanKhachHang__phantu:hover {
+    color: var(--brand-color);
+    
+}
+.boxthongtinhachhang__dong-memu {
+    list-style: none;
+}
+.vemaybay-mota {
+    margin-top: 2rem;
+}
+.boxthongtinhachhang__dong-memu {
+    cursor: pointer;
+}
+.modal-header--thaydoiemail {
+    border: none;
+}
+.modal-header--xacthucemail {
+    border: none;
+}
+.modal-title--thaydoiemail {
+    color: #0f294d;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.modal-body--thaydoiemail {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.phantieude-khachhang {
+    color: #455873;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 16px;
+}
+.phannoidung-khachhang {
+    height: 22px;
+    box-sizing: content-box;
+    color: #0f294d;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    line-height: 22px;
+    padding: 8px 0;
+    border-bottom: 1px solid #dadfe6;
+}
+.btn_yeucau,.btn_yeucau-sdt,.btn_yeucau--pass ,.btnLuThayDoithongtin{
+    position: relative;
+    line-height: 56px;
+    text-align: center;
+    height: 56px;
+    box-sizing: border-box;
+    background: #3264ff;
+    border-radius: 4px 4px 4px 4px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    margin-top: 16px;
+    width: 100%;
+}
+.btnLuThayDoithongtin:hover {
+    background-color: #190F8A;
+    color: var(--white-color);
+}
+.btn_yeucau:hover {
+    background-color: #190F8A;
+    color: var(--white-color);
+}
+.btn_yeucau-sdt:hover{
+    background-color: #190F8A;
+    color: var(--white-color);
+}
+.btn_yeucau--pass:hover{
+    background-color: #190F8A;
+    color: var(--white-color);
+}
+.modal-body--phanluuy {
+    color: #455873;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 22px;
+    margin-top: 16px;
+}
+.thaydoiemail__body{
+    margin: 0 auto;
+    max-width: 36rem;
+    margin-bottom: 5rem;
+    
+}
+.modal-content--guiemail {
+    max-width: 42rem;
+}
+.modal-body--xacthucthaydoiemail {
+    width: 100%;
+}
+.container__phanmaxacthuc{
+    padding: 0;
+    text-align: left;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.phammaxacthuc__luuy {
+    color: #8592a6;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 18px;
+    padding: 4px 0 0 0;
+}
+.box__maxacthuc {
+    padding: 0;
+    text-align: left;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.code_input_wrapper {
+    align-items: center;
+    border: none;
+    box-sizing: border-box;
+    display: flex;
+    height: 62px;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+}
+.linkguilaimaxacminh {
+    padding: 16px 0;
+    color: #3264ff;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 22px;
+    cursor: pointer;
+}
+.code_input_wrapper .item_input {
+    background: #fff;
+    border: 1px solid #dadfe6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    caret-color: #ced2d9;
+    color: #0f294d;
+    display: block;
+    float: left;
+    font-size: 30px;
+    width: 100%;
+}
+.code_input_wrapper .pc-item-input {
+    height: 62px;
+
+}
+.modal-body--phanluuy-thaydoi {
+    color: #455873;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0px;
+    line-height: 22px;
+    margin-top: 15px;
+}
+input.phannoidung-khachhang {
+    font-size: medium;
+    border: 1px solid #dadfe6;
+    font-weight: normal;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: 16px 12px 16px 8px;
+    position: relative;
+    width: 100%;
+    height: 4rem;
+}
+::placeholder {
+    color: #dadfe6;
+}
+#thaydoiemail {
+    transform: translateX(5%);
+}
+.iconquaylai {
+    cursor: pointer;
+}
+.thanhphan--maxacnhan{
+    width: 15%;
+}
+.verify-option-container {
+
+}
+.card-list{
+    margin-top: 16px;
+}
+.content-desc {
+    color: #455873;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+.options-card-container{
+    display: flex;
+    align-items: center;
+    background: #f5f7fa;
+    border-radius: 4px;
+    padding: 16px 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    justify-content: space-evenly;
+}
+.options-img {
+    width: 40px;
+    height: 40px;
+}
+.content-wrapper {
+    width: 100%;
+}
+.options-card-title{
+    color: #0f294d;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    margin-bottom: 5px;
+}
+.options-card-container .right-icon {
+    rotate: 90deg;
+}
+
+.options-card-container .base-icon {
+    color: #8592A6;
+}
+.name-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+}
+.input-label {
+    position: absolute;
+    left: 8px;
+    padding: 0 4px;
+    z-index: 2;
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(28px);
+    transform-origin: 0 0 0;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #8592a6;
+    line-height: 16px;
+    display: block;
+}
+.title-animate  {
+    opacity: 1;
+    top: -9px;
+    transform: translate(0,0);
+    transition: all 0.5s;
+    background: #fff;
+}
+.input-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #dadfe6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0 20px 0 14px;
+}
+.name-input input {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    line-height: 22px;
+    width: 100%;
+    font-size: 16px;
+    color: #0f294d;
+    font-weight: 700;
+    padding: 16px 8px;
+}
+.gender-input-wrap {
+
+}
+.blue-label,.icon-blue{
+    color: #3264ff;
+}
+.input-active {
+    border: 1px solid #3264ff;
+}
+.auto-list-wrapper{
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 60px;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px 0px rgba(15, 41, 77, 0.08);
+    border-radius: 4px 4px 4px 4px;
+
+}
+.auto-list-wrapper ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.3rem;
+}
+.name-input .auto-list-wrapper ul li{
+    line-height: 18px;
+    background: #fff;
+    padding: 10px;
+    color: #0f294d;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.name-input .auto-list-wrapper ul li:hover{
+    background-color: #e9edf9;
+}
+.name-input .auto-list-wrapper ul li.choosed {
+    color: #3264ff;
 }
  /* /.hết trang khách hàng */
