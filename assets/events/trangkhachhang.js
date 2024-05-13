@@ -266,7 +266,7 @@ $(document).ready(function() {
 
 
 
-// JavaScript code
+
 document.addEventListener("DOMContentLoaded", function() {
     // Lấy ra nút "Chỉnh sửa"
     var editButton = document.getElementById("chinhsuathongtinkhachhang");
