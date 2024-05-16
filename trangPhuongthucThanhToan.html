@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <title>website bán vé máy bay Baconcuu</title>
-
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -16,17 +15,13 @@
 
         <link rel="stylesheet" href="./assets/style/base.css" /> 
         <link rel="stylesheet" href="./assets/style/trangphuognthucthanhtoan.css" /> 
-        <link rel="stylesheet" href="./assets/style/main.css" /> 
-        <script src ="./assets/events/trangchonphuongthucthanhtoan.js"></script>
-        <link rel="stylesheet" href="./assets/style/main.css" /> 
+        <link rel="stylesheet" href="./assets/style/main.css" />
+         
         <script src ="./assets/events/event_index.js"></script>
         <script src ="./assets/events/formdangky.js"></script>
         <script src ="./assets/events/formdangnhap.js"></script>
         <script src ="./assets/events/formhotro.js"></script>
-        <script src ="./assets/events/thanhtimkiem.js"></script>
-        <script src ="./assets/events/chonchuyenbay.js"></script>
-
-
+        <script src ="./assets/events/trangchonphuongthucthanhtoan.js"></script>
     </head>
     <body>
         <script>
@@ -93,7 +88,7 @@
                         </div>
                         <div class="row ">
                             <div class="col-xs-4 col-sm-12">
-                                <span class="desc">Bạn chưa có tài khoản thành viên? <a href="#">Đăng Ký Tài Khoản</a></span>
+                                <span class="desc">Bạn chưa có tài khoản thành viên? <a href="#" class="_dangky">Đăng Ký Tài Khoản</a></span>
                             </div>
                         </div>
                         <div class="row ">
@@ -421,32 +416,27 @@
     </nav>
     <!--Kết thúc header-->
             <!-- chọn chuyến bay-->
-    <form action="" name="" method="post">
-        <div class="trangDienThongTin trangchonphuongthucthanhtoan">
-            <div class="container">
-                <div class="row">
-                    <div class="thongTinHanhKhach__tieuDe col-xs-12  col-md-9 ">
-                        <div class="title title--thongTinHanhKhach">Phương thức thanh toán</div>
-                        <div class="desc desc--thongtinhanhkhach" style=" margin-left: 0rem;">chọn phương thức thanh toán bên dưới.</div>
-                    </div> 
-                    <form action="">
-                    <!-- phuong thuc thanh toan-->
-                     <div class="thongTinHanhKhach col-xs-12  col-md-8 ">
-                        <ul class="phuongthucthanhtoan">
-                            <li class="phuongthuc select__phuongthuc"  value="1">
-                                <img src="./assets/images/vnpay-qr-23-06-2020-2.jpg" alt="qrthanhtoan" class="img__thanhtoan img-responsive">
-                                <div class="tenphuongtuc">Quét mã QR VNPAY</div>
-                            </li>
-                            <li class="phuongthuc" value="2">
-                                <img src="./assets/images/momo-icon.png" alt="qrthanhtoan"  class="img__thanhtoan img-responsive">
-                                <div class="tenphuongtuc">Ví MoMo</div>
-                            </li>
-                            <li class="phuongthuc"  value="3">
-                                <img src="./assets/images/cc-apple-pay.png" alt="qrthanhtoan"  class="img__thanhtoan img-responsive">
-                                 <div class="tenphuongtuc">Apple Pay</div>
-                            </li>
-                        </ul>
-                        <div class="chitietthanhtoan col-xs-12  col-md-9">
+    <div class=" trangchonphuongthucthanhtoan">
+        <div class="container">
+            <!-- Modal -->
+            <div class="modal fade" id="thanhtoanModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                <div class="modal-header backgroud__modal__brandcolor">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="title__modalchitietthanhtoan">Thông Tin Thanh Toán</div>
+                </div>
+                <div class="modal-body">
+                    <div class="thongtinthanhtoan">
+                        <div class="thongtinthanhtoannganhang">
+                            <div class="tennganhangthanhtoan">
+                                VNPAY QR
+                            </div>
+                            <img src="./assets/images/vnpay.png" alt="qrthanhtoan" class="img__thanhtoan img-responsive">
+                        </div>
+                        <div>
                             <div class="chitietthanhtoan__title">
                                 Chi Tiết Thanh Toán
                             </div>
@@ -455,128 +445,165 @@
                                 <div class="thitietthianhtoan__dong"><div class="tieudemuc">Mã Khuyến mãi</div><div class="noidungmuc"><span id="tongtienmakhuyenmai">0</span>,000VND</div></div>
                                 <div class="thitietthianhtoan__dong"><div class="tieudemuc">Phí tiện ích</div><div class="noidungmuc"><span id="tongtienphidichvu">1000</span>,000VND</div></div>
                                 <div class="thitietthianhtoan__dong dongtongtien"><div class="tieudemuc">Tổng tiền</div><div class="noidungmuc"><span id="tongtien">2000</span>,000VND</div></div>
-                            </div> 
-                            <div class="box_makhuyenmai">
-                                <div class="box__checksudungma">
-                                    <input type="checkbox" id="sudungmaquatang" value="sudungmaquatang">
-                                    <div class="makhuyenmai">Mã khuyến mãi hoặc quà tặng</div>
-                                </div>
-                                <form action="">
-                                <div class="magiamgia" id="magiamgia">
-                                        <input type="text" class="input__mathanhtoan" placeholder="Mã khuyến mãi?" value="">
-                                        <button type="button" class="btnSubmit__magiamgia">Xác nhận</button>
-                                    </form>
-                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- box chuyen bay được chọn-->
-                    <div class="col-xs-12  col-md-4 trangDienThongTin ">
-                        <div class="chyenbayduocchon ">
-                            <div class="chyenbayduocchon__chuyenbay trangDienThongTinHanhKhach__muavemaybay background-white pulse  box-shadow-blackcolor" id="chuyenbayduocchon__chuyendi-DienThongTinHK">
-                                <div class="chyenbayduocchon__title">
-                                    Chuyến Đi
-                                </div>
-                                <div class="chyenbayduocchon__chitietchuyenbay ">
-                                    <div class="chyenbayduocchon__item ">
-                                        <div class="chyenbayduocchon__item__part ">
-                                            <span class="required" id="chuyendi__macb"></span>
-                                        </div>
-                                        <div class="chyenbayduocchon__item__part chyenbayduocchon__item__part--text-align-right">
-                                            <span class="chyenbayduocchon-thongtin" id="chuyendi__ngaybay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin" id="chuyendi__giobay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin" id="chuyendi__lichbay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin color-grey" id="chuyendi__hanhtrinhbay"></span>
-                                        </div>
-                                    </div>
-                                    <div class="chyenbayduocchon__item">
-                                        <div class="chyenbayduocchon__item__part"></div>
-                                        <div class="chyenbayduocchon__item__part">
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Giá vé :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" >0<span id="chuyendi__giave"></span>.000VND</div>
-                                            </div>
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Thuế :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyendi__thue"></span>.000VND</div>
-                                            </div>
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Tổng :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyendi__tongtien">12</span>.000VND</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="chyenbayduocchon__chuyenbay  trangDienThongTinHanhKhach__muavemaybay background-white box-shadow-blackcolor" id="chuyenbayduocchon__chuyenve-DienThongTinHK">
-                                <div class="chyenbayduocchon__title"  >
-                                    Chuyến Về
-                                </div>
-                                <div class="chyenbayduocchon__chitietchuyenbay">
-                                    <div class="chyenbayduocchon__item">
-                                        <div class="chyenbayduocchon__item__part">
-                                            <span class="required" id="chuyenve__macb"> </span>
-                                        </div>
-                                        <div class="chyenbayduocchon__item__part chyenbayduocchon__item__part--text-align-right">
-                                            <span class="chyenbayduocchon-thongtin" id="chuyenve__ngaybay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin" id="chuyenve__giobay"> </span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin" id="chuyenve__lichbay"></span>
-                                            <br>
-                                            <span class="chyenbayduocchon-thongtin color-grey" id="chuyenve__hanhtrinhbay"> </span>
-                                        </div>
-                                    </div>
-                                    <div class="chyenbayduocchon__item">
-                                        <div class="chyenbayduocchon__item__part"></div>
-                                        <div class="chyenbayduocchon__item__part">
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Giá vé :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyenve__giave"></span>.000VND</div>
-                                            </div>
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Thuế :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyenve__thue"></span>.000VND</div>
-                                            </div>
-                                            <div class="thongtinchitietgiave-item">
-                                                <div class="thongtinchitietgiave-title">
-                                                    Tổng :
-                                                </div>
-                                                <div class="thongtinchitietgave-giave" ><span id="chuyenve__tongtien">12</span>.000VND</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="thongtinnganhang">
+                        <div class="motacachgiaodich">
+                            Scan QR code via Bank/ E-wallet app
                         </div>
+                        <img src="https://thumbs.dreamstime.com/b/scan-qr-code-smartphone-screen-d-scanning-barcode-concept-qr-pay-isometric-vector-illustration-electronic-online-scan-qr-code-206044891.jpg" alt="anhQR" class="anhqrthanhtoan">
+                        <button type="button" class="cancel__thanhtoan" data-dismiss="modal">Cancel</button>
                     </div>
-                    <!--/. kết thuc  box chuyen bay được chọn-->
-                </div>  
-                <input type="hidden" class="hidden" id="input_phuongthuc" value="1">
-                <div class="thanhdieuhuong__phuongthucthanhtoan row">
-                    <button type="button" class="_btnQuayLai btn__vuong">Quaylai</button>
-                    <button type="submit" class="_btnChuyenTiep btn__vuong" >Xác nhận thanh toán</button>
-                </form>
+                </div>
+                <div class="modal-footer backgroud__modal__brandcolor thongtinthanhtoan">
+                    <button type="button" class="btn btn-primary btnmodal">Đi Tiếp</button>
+                </div>
                 </div>
             </div>
+            </div>
+            <div class="row">
+                <div class="thongTinHanhKhach__tieuDe col-xs-12  col-md-9 ">
+                    <div class="title title--thongTinHanhKhach">Phương thức thanh toán</div>
+                    <div class="desc desc--thongtinhanhkhach" style=" margin-left: 0rem;">chọn phương thức thanh toán bên dưới.</div>
+                </div> 
+                <!-- phuong thuc thanh toan-->
+                    <div class="thongTinHanhKhach col-xs-12  col-md-8 ">
+                    <ul class="phuongthucthanhtoan">
+                        <li class="phuongthuc select__phuongthuc"  value="1">
+                            <img src="./assets/images/vnpay-qr-23-06-2020-2.jpg" alt="qrthanhtoan" class="img__thanhtoan img-responsive">
+                            <div class="tenphuongtuc">Quét mã QR VNPAY</div>
+                        </li>
+                    </ul>
+                    <div class="chitietthanhtoan col-xs-12  col-md-9">
+                        <div class="chitietthanhtoan__title">
+                            Chi Tiết Thanh Toán
+                        </div>
+                        <div class="noidungchitietthanhtoan">
+                            <div class="thitietthianhtoan__dong"><div class="tieudemuc">Tạm tính</div><div class="noidungmuc"><span id="tongtientamtinh">3000</span>,000VND</div></div>
+                            <div class="thitietthianhtoan__dong"><div class="tieudemuc">Mã Khuyến mãi</div><div class="noidungmuc"><span id="tongtienmakhuyenmai">0</span>,000VND</div></div>
+                            <div class="thitietthianhtoan__dong"><div class="tieudemuc">Phí tiện ích</div><div class="noidungmuc"><span id="tongtienphidichvu">1000</span>,000VND</div></div>
+                            <div class="thitietthianhtoan__dong dongtongtien"><div class="tieudemuc">Tổng tiền</div><div class="noidungmuc"><span id="tongtien">2000</span>,000VND</div></div>
+                        </div> 
+                        <div class="box_makhuyenmai">
+                            <div class="box__checksudungma">
+                                <input type="checkbox" id="sudungmaquatang" value="sudungmaquatang">
+                                <div class="makhuyenmai">Mã khuyến mãi hoặc quà tặng</div>
+                            </div>
+                            <form action="">
+                            <div class="magiamgia" id="magiamgia">
+                                    <input type="text" class="input__mathanhtoan" placeholder="Mã khuyến mãi?" value="">
+                                    <button type="button" class="btnSubmit__magiamgia">Xác nhận</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- box chuyen bay được chọn-->
+                <div class="col-xs-12  col-md-4 trangDienThongTin ">
+                    <div class="chyenbayduocchon ">
+                        <div class="chyenbayduocchon__chuyenbay trangDienThongTinHanhKhach__muavemaybay background-white pulse  box-shadow-blackcolor" id="chuyenbayduocchon__chuyendi-DienThongTinHK">
+                            <div class="chyenbayduocchon__title">
+                                Chuyến Đi
+                            </div>
+                            <div class="chyenbayduocchon__chitietchuyenbay ">
+                                <div class="chyenbayduocchon__item ">
+                                    <div class="chyenbayduocchon__item__part ">
+                                        <span class="required" id="chuyendi__macb"></span>
+                                    </div>
+                                    <div class="chyenbayduocchon__item__part chyenbayduocchon__item__part--text-align-right">
+                                        <span class="chyenbayduocchon-thongtin" id="chuyendi__ngaybay"> </span>
+                                        <br>
+                                        <span class="chyenbayduocchon-thongtin" id="chuyendi__giobay"> </span>
+                                        <br>
+                                        <span class="chyenbayduocchon-thongtin" id="chuyendi__lichbay"> </span>
+                                        <br>
+                                        <span class="chyenbayduocchon-thongtin color-grey" id="chuyendi__hanhtrinhbay"></span>
+                                    </div>
+                                </div>
+                                <div class="chyenbayduocchon__item">
+                                    <div class="chyenbayduocchon__item__part"></div>
+                                    <div class="chyenbayduocchon__item__part">
+                                        <div class="thongtinchitietgiave-item">
+                                            <div class="thongtinchitietgiave-title">
+                                                Giá vé :
+                                            </div>
+                                            <div class="thongtinchitietgave-giave" >0<span id="chuyendi__giave"></span>.000VND</div>
+                                        </div>
+                                        <div class="thongtinchitietgiave-item">
+                                            <div class="thongtinchitietgiave-title">
+                                                Thuế :
+                                            </div>
+                                            <div class="thongtinchitietgave-giave" ><span id="chuyendi__thue"></span>.000VND</div>
+                                        </div>
+                                        <div class="thongtinchitietgiave-item">
+                                            <div class="thongtinchitietgiave-title">
+                                                Tổng :
+                                            </div>
+                                            <div class="thongtinchitietgave-giave" ><span id="chuyendi__tongtien">12</span>.000VND</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="chyenbayduocchon__chuyenbay  trangDienThongTinHanhKhach__muavemaybay background-white box-shadow-blackcolor" id="chuyenbayduocchon__chuyenve-DienThongTinHK">
+                            <div class="chyenbayduocchon__title"  >
+                                Chuyến Về
+                            </div>
+                            <div class="chyenbayduocchon__chitietchuyenbay">
+                                <div class="chyenbayduocchon__item">
+                                    <div class="chyenbayduocchon__item__part">
+                                        <span class="required" id="chuyenve__macb"> </span>
+                                    </div>
+                                    <div class="chyenbayduocchon__item__part chyenbayduocchon__item__part--text-align-right">
+                                        <span class="chyenbayduocchon-thongtin" id="chuyenve__ngaybay"> </span>
+                                        <br>
+                                        <span class="chyenbayduocchon-thongtin" id="chuyenve__giobay"> </span>
+                                        <br>
+                                        <span class="chyenbayduocchon-thongtin" id="chuyenve__lichbay"></span>
+                                        <br>
+                                        <span class="chyenbayduocchon-thongtin color-grey" id="chuyenve__hanhtrinhbay"> </span>
+                                    </div>
+                                </div>
+                                <div class="chyenbayduocchon__item">
+                                    <div class="chyenbayduocchon__item__part"></div>
+                                    <div class="chyenbayduocchon__item__part">
+                                        <div class="thongtinchitietgiave-item">
+                                            <div class="thongtinchitietgiave-title">
+                                                Giá vé :
+                                            </div>
+                                            <div class="thongtinchitietgave-giave" ><span id="chuyenve__giave"></span>.000VND</div>
+                                        </div>
+                                        <div class="thongtinchitietgiave-item">
+                                            <div class="thongtinchitietgiave-title">
+                                                Thuế :
+                                            </div>
+                                            <div class="thongtinchitietgave-giave" ><span id="chuyenve__thue"></span>.000VND</div>
+                                        </div>
+                                        <div class="thongtinchitietgiave-item">
+                                            <div class="thongtinchitietgiave-title">
+                                                Tổng :
+                                            </div>
+                                            <div class="thongtinchitietgave-giave" ><span id="chuyenve__tongtien">12</span>.000VND</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/. kết thuc  box chuyen bay được chọn-->
+            </div>  
+            <input type="hidden" class="hidden" id="input_phuongthuc" value="1">
+            <div class="thanhdieuhuong__phuongthucthanhtoan row">
+                <button type="button" class="_btnQuayLai btn__vuong">Quaylai</button>
+                <button type="submit" class="_btnChuyenTiep btn__vuong"  data-toggle="modal" data-target="#thanhtoanModal" >Xác nhận thanh toán</button>
+            </div>
         </div>
-        </form>
+    </div>
          <!--phần chân trang-->
      <div class="container">
         <div class="row">

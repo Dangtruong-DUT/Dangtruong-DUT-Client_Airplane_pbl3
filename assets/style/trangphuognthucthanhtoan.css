@@ -1,8 +1,9 @@
 .trangchonphuongthucthanhtoan {
     background-image: radial-gradient(50% 50% at 50% 50%, rgba(160, 51, 255, .024) 0%, rgba(160, 51, 255, 0) 50%), radial-gradient(50% 50% at 50% 50%, rgba(160, 51, 255, .04) 0%, rgba(160, 51, 255, 0) 75%), radial-gradient(50% 50% at 50% 50%, rgba(160, 51, 255, .064) 0%, rgba(160, 51, 255, 0) 100%), radial-gradient(50% 50% at 50% 50%, rgba(24, 119, 242, .024) 0%, rgba(24, 119, 242, 0) 50%), radial-gradient(50% 50% at 50% 50%, rgba(24, 119, 242, .04) 0%, rgba(24, 119, 242, 0) 75%), radial-gradient(50% 50% at 50% 50%, rgba(24, 119, 242, .064) 0%, rgba(24, 119, 242, 0) 100%), radial-gradient(50% 50% at 50% 50%, rgba(255, 108, 92, .024) 0%, rgba(255, 108, 92, 0) 50%), radial-gradient(50% 50% at 50% 50%, rgba(255, 108, 92, .04) 0%, rgba(255, 108, 92, 0) 75%), radial-gradient(50% 50% at 50% 50%, rgba(255, 108, 92, .064) 0%, rgba(255, 108, 92, 0) 100%), radial-gradient(50% 50% at 50% 50%, rgba(245, 206, 51, .024) 0%, rgba(245, 206, 51, 0) 50%), radial-gradient(50% 50% at 50% 50%, rgba(245, 206, 51, .04) 0%, rgba(245, 206, 51, 0) 75%), radial-gradient(50% 50% at 50% 50%, rgba(245, 206, 51, .064) 0%, rgba(245, 206, 51, 0) 100%), radial-gradient(50% 50% at 50% 50%, rgba(37, 211, 102, .024) 0%, rgba(37, 211, 102, 0) 50%), radial-gradient(50% 50% at 50% 50%, rgba(37, 211, 102, .04) 0%, rgba(37, 211, 102, 0) 75%), radial-gradient(50% 50% at 50% 50%, rgba(37, 211, 102, .064) 0%, rgba(37, 211, 102, 0) 100%), radial-gradient(50% 50% at 50% 50%, rgba(24, 119, 242, .024) 0%, rgba(24, 119, 242, 0) 50%), radial-gradient(50% 50% at 50% 50%, rgba(24, 119, 242, .04) 0%, rgba(24, 119, 242, 0) 75%), radial-gradient(50% 50% at 50% 50%, rgba(24, 119, 242, .064) 0%, rgba(24, 119, 242, 0) 100%);
     border-bottom: 2px solid whitesmoke;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
+
 .background-white {
     background-color: whitesmoke;
     border-radius: 0.5rem;
@@ -16,7 +17,7 @@
     border-radius: 0.5rem;
 }
 .phuongthucthanhtoan {
-    width: 80%;
+    width: fit-content;
     border: 2px solid #605DEC;
     display: flex;
     border-radius: 0.6rem;
@@ -124,4 +125,58 @@
     border-radius: 0.3rem;
     padding: 1rem;
     margin-right: 2rem;
+}
+.title__modalchitietthanhtoan {
+    font-size: x-large;
+    color:white;
+    font-weight: bold;
+}
+.backgroud__modal__brandcolor {
+    background-color   : rgb(253, 253, 253);
+    background-color: var(--brand-color);
+    border-bottom: 1px solid var(--brand-color);
+    border-top: 1px solid var(--brand-color);
+    border-radius: 0.5rem;
+}
+.border-radius {
+    border-radius: 0.5rem !important;
+}
+.modal {
+    border-radius: 0.5rem;
+}
+.btnmodal {
+    background-color: whitesmoke;
+    color: #0f294d ;
+}
+.thongtinthanhtoannganhang {
+    display: flex;
+    justify-content: space-between;
+}
+.tennganhangthanhtoan {
+    color: brown;
+    font-weight: bold;
+}
+.anhqrthanhtoan {
+    width: auto;
+    height: 20rem;
+}
+.thongtinnganhang {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.motacachgiaodich {
+    color: #0f294d;
+    font-size: large;
+    font-weight: bold;
+}
+.cancel__thanhtoan {
+    padding: 1rem;
+    background-color: whitesmoke;
+    color: black;
+    width: 150px;
+    border-radius: 0.3rem;
 }

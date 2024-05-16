@@ -17,7 +17,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $('.btnSubmit__magiamgia').click(function() {
-       var tongtien= parseFloat($('#tongtientamtinh').text()) + parseFloat($('#tongtienmakhuyenmai').text()) + parseFloat($('#tongtienphidichvu').text())
+       var tongtien= parseFloat($('#tongtientamtinh').text()) - parseFloat($('#tongtienmakhuyenmai').text()) + parseFloat($('#tongtienphidichvu').text())
        $('#tongtien').text(tongtien)
     });;
-});
+}); 
