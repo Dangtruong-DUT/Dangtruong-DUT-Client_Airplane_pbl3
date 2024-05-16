@@ -1,7 +1,7 @@
 .tranghoadon {
    background-color: rgb(233, 237, 240);
     border-bottom: 2px solid whitesmoke;
-    padding: 3rem 0;
+    padding: 5rem 0;
 }
 .motatrangthaithanhtoan {
     color: #007B65;
@@ -49,11 +49,6 @@
 .dongtongtien_hoadon {
     border-top: 1px solid #114cc3;
 }
-.phanngangcach {
-    margin: 0 auto;
-    text-align: center;
-    width: 50%;
-    height: 1rem;
-    border-radius: 0.5rem;
-    background-color: #60cbb7;
+.desc--hoadon {
+    padding: 0;
 }
