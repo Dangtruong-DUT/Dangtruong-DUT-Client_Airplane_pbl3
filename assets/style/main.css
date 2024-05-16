@@ -386,6 +386,7 @@
 /*  phần chân trang*/
 
 .chanTrang {
+    padding-top: 5rem;
     color:#337ab7;
 }
 .chanTrang__title {
