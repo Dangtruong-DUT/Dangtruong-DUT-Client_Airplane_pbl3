@@ -43,11 +43,14 @@ $(document).ready(function() {
         $('#input_phuongthuc').val(_value);
     });
 });
-
 $(document).ready(function(){
-    $("#sudungmaquatang").change(function(){
-        $(".magiamgia").toggle();
-    });
+  $('#sudungmaquatang').change(function(){
+    if($(this).is(':checked')){
+      $('#magiamgia').show();
+    } else {
+      $('#magiamgia').hide();
+    }
+  });
 });
 
   
