@@ -79,10 +79,14 @@ button{
     padding: 2rem;
     border-radius: 0.5rem;
     border: 1px solid var(--text-grey-color);
+    padding-left: 10px;
 }
 .theInput:focus-within {
     border: 2px solid var(--brand-color)
 }
 .theInput::placeholder {
     color: var(--text-grey-color);
+    font-size: medium;
+    font-weight: normal;
+    padding-left: 10px;
 }

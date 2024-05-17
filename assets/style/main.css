@@ -11,6 +11,8 @@
     margin-left: 50rem;
     text-align: center;
     padding: 1rem;
+    max-height: max-content;
+    margin: auto !important;
 }
 .messagebox__bieutuong{
     font-size: xx-large;
@@ -77,17 +79,23 @@
 }
 
 /*form dang ky& dang nhập */
-.container__form,.navbar__dangKy {
-    position: fixed;
-    position: absolute;
-    margin: 0 40rem;
+.container__form,.navbar__dangKy ,.messagebox{
     display: none;
-    color:var(--text-grey-color);
-    text-align: left;
     z-index: 2;
-}
-.navbar__dangNhap{
-    margin-top: 12rem;
+    transform: translate(0,0);
+    position: relative;
+    margin: 30px auto;
+    transition: transform .3s ease-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: #6e726e;
+    width: 450px;
 }
 .btnSubmitEnroll,.btnSubmitformCSKH{
     margin-top: 1rem;
@@ -100,13 +108,20 @@
     border: 2px solid;
 }
 .navbar__formdangky,.container__form {
-    width: auto;
     margin-top:  5rem;
     background-color: var(--white-color);
     border: 1px solid var(--vien-color);
     box-shadow: -2px 1px 90px -2px var(--brand-color);
     border-radius: 12px;
     padding: 4rem;
+    overflow-y: auto;
+}
+
+.navbar__formdangky,.navbar__dangNhap {
+    width: 589px;
+}
+.input--dangnhap {
+    margin: 1rem 0;
 }
 .navbar__formdangky__icon-exit{
     transform: translateX(70%);
@@ -119,19 +134,41 @@
     font-weight: bolder;
     font-size: larger;
 }
-.formdangky-row,.formdangnhap-row,.phieuYeuCauHoTro-row{
-    font-family: sans-serif;
-    margin: 0.5rem 0;
+.formdangky--gioitinh {
+    margin-bottom: 3rem;
 }
-.form-title{
-    font-weight: bolder;
+
+.formdangky-row,.formdangnhap-row,.phieuYeuCauHoTro-row{
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.form-title {
+    color: #8592a6;
+    opacity: 1;
+    top: -8px;
+    transform: translate(0,0);
+    transition: all 0.5s;
+    background: #fff;
+    position: absolute;
+    left: 12px;
+    padding: 0 4px;
+    z-index: 2;
+    font-size: 12px;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
 }
 .title_enroll,.title_signin{
     color: var(--text-greyer-color);
     font-size: x-large;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.42857143;
 }
 .desc{
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    color: #7C8DB0;
 }
 .formernoll-gender{
     margin: 0 3rem;
@@ -148,38 +185,85 @@
     transform: translateY(20%);
 }
 .btnSubmitEnroll,.btnSubmitformCSKH{
+    height: 4rem;
     background-color: var(--brand-color);
     width: 100%;
     padding: 0.5rem;
     border-radius: 0.5rem;
     color: var(--white-color);
 }
-/* hết phần form dang ký & dang nhap */
-
-/* CSKH */
-
-.cskh{
-    display: none;
-    padding-bottom: 0;
-    padding-top: 8px;
-    z-index: 2;
+.title-left {
+    transform: translateY(50%);
+    margin-bottom: 0;
+    font-size: medium;
+    color: #8592a6;
+    text-align: left;
+    font-weight: bold;
 }
+.title--gioitinh{
+    transform: translateY(0px);
+}
+/* hết phần form dang ký & dang nhap */
+.form-control {
+    height: 5rem;
+}
+.navbar__dangKy::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+
+.navbar__dangKy::-webkit-scrollbar-thumb {
+    background-color: var(--vien-color);
+    border-radius: 0.1rem;
+    height: fit-content;
+    width: 3px;
+    cursor: pointer;
+}
+.cskh {
+    margin: auto;
+    height: 700px;
+    display: none;
+    /* padding-bottom: 0; */
+    z-index: 2;
+    transform: translate(0,0);
+    position: relative;
+    width: 582px;
+    margin: 30px auto;
+    transition: transform .3s ease-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: #6e726e;
+}
+
 .cskh button:hover{
     border: 2px solid var(--brand-color);
 }
 .navbar__formcskh__icon-exit{
     text-align: end;
 }
+
 .cskh button {
     margin-bottom: 1rem;
-    width: 20%;
-    float: right;
+    width: 100%;
+    /* float: right; */
 }
 
+
 .content{
-    margin-top: 2rem;
-    padding: 3rem;
+    display: flex;
+    padding: 3rem 3rem;
     border-radius: 0.5rem;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
 }
 .phieuYeuCauHoTro__Noidungchitiet{
     padding-bottom: 10px;
@@ -188,6 +272,10 @@
     margin-right: 30;
     color: #555;
     font-weight: lighter;
+    width: 100%;
+}
+textarea:focus {
+    border-color: var(--brand-color);
 }
 .menubar-container{
     display: flex;
@@ -257,6 +345,7 @@
     border: 1px solid var(--vien-color);
     position: relative;
     cursor: pointer;
+    background-color: white;
 }
 .timkiemchuyenbay__phantu:hover{
     flex:1;
